@@ -67,12 +67,14 @@ html {
 	height:75%;
 	overflow:hidden;
 	border-radius:100%;
+	margin-top:0.75em;
 }
 .avatar-round img {
 	margin-left:auto;
 	margin-right:auto;
 	width:100%;
 	height:auto;
+	display:block;
 }
 .avatar img {
 	border-radius:100%;
@@ -98,12 +100,9 @@ html {
 	padding-bottom:3em;
 }
 .row h4{
-	display:inline-block;
-	margin-top:1em;
   	height:45px;
-	width:auto;
+	width:75%;
 	color:#f4f4f4;
-	/*color:#282824;*/
 	font-size:26px;
 	letter-spacing:.07em;
 	font-weight:lighter;
@@ -122,6 +121,7 @@ html {
 	color:#f4f4f4;
 }
 .row h4 a {
+	display:block;
 	font-size:1.1rem;
 	padding:10px;
 	color:#202;
@@ -129,6 +129,9 @@ html {
 	background-color:transparent;
 	border:2px solid #f4f4f4;
 	color:#f4f4f4;
+	width:75%;
+	margin-left:auto;
+	margin-right: auto;
 }
 .row h4 a:hover {
 	padding:10px;
