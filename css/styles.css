@@ -129,7 +129,7 @@ html {
 	background-color:transparent;
 	border:2px solid #f4f4f4;
 	color:#f4f4f4;
-	width:75%;
+	width:15em;
 	margin-left:auto;
 	margin-right: auto;
 }
@@ -153,8 +153,8 @@ html {
 	background-color:#282824;
 	max-width:20%;
 	padding:10px;
-	margin-top:15px;
-	margin-left:25px;
+	margin-top:2em;
+	margin-left:2em;
 	height:100%;
 	text-align:center;
 	float:center;
@@ -369,11 +369,8 @@ ul.icons li {
 		line-height:1.5;
 		font-size:14px;
 	}
-	footer .text-banner .col p {
+	footer  p {
 		font-size:14px;
-	}
-	footer h2  {
-		font-size:1.2rem;
 	}
 	main p {
 	font-size:1.1rem;
@@ -422,7 +419,7 @@ ul.icons li {
 		line-height:1.5;
 		font-size:14px;
 	}
-	footer .text-banner .col p {
+	footer p {
 		font-size:14px;
 	}
 	footer h2  {
@@ -778,12 +775,6 @@ header section{
 	line-height:19px;
 	width:7em;
 }
-
-
-
-
-
-
 .nav-btn {
 	display:none;
 }
@@ -813,6 +804,31 @@ header section{
 .current{
 	color:#ffffff;
 }
+
+.col-4 {
+	width:50%;
+	float:left;
+	padding:5em 1.5em 5em 12em;
+	vertical-align:center;
+	height:auto;
+}
+.col-4 p {
+	width:20%;
+	font-size:20px;
+}
+
+.col-8 {
+	width:50%;
+	float:left;
+	padding:1.5em 1.5em 0em 1.5em;
+}
+.gallery-banner {
+	padding-top:1.5em;
+	padding-right:3em;
+	max-width:100%;
+	vertical-align: bottom;
+}
+
 
 /*Main Body Stylings - Global*/
 main section{
@@ -1060,30 +1076,17 @@ fieldset button[type="submit"]:hover {
 	color:#ffffff;
 }
 footer {
-	color:#a9a9a9;
-	font-size:13px;
+	color:#ffffff;
 	letter-spacing:.07em;
 	font-weight:lighter;
-	line-height:19px;
 	background-color:#282824;
 	height:auto;
 	line-height:1.5;
 	bottom:0;
 	width:100%;
 }
-footer h2 {
-	letter-spacing:.07em;
-	line-height: 19px;
-	text-transform:uppercase;
-	font-weight:lighter;
-}
-footer .text-banner .col p {
-	letter-spacing:.07em;
-	text-transform:uppercase;
-	font-weight:lighter;
-}
-footer .col {
-	padding:0 3px;
+footer p {
+	font-size:17px;
 }
 .fade {
   -webkit-animation-name: fade;
