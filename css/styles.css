@@ -174,7 +174,7 @@ html {
 }
 ul.icons li {
     display: inline-block;
-    margin: 0 -4em 0 0;
+    margin: 0 1em 0 0;
     
 }
 .icon-style img{
@@ -196,47 +196,12 @@ ul.icons li {
 	margin-right:auto;
 }
 .profile-img {
-	margin-top:25px;
 	height:auto;
 	width:300px;
 	border-radius:50%;
-	margin-bottom:25px; 
 	margin-right:25px;	
 }
-.slideshow-container {
-	height:auto;
-	width:90%;
-	position:relative;
-	margin:auto;
-}
-.mySlides {
-	display:none;
-	margin-top:25px;
-	margin-right:auto;
-	margin-left:auto;
-}
 
-.prev, .next {
-	cursor:pointer;
-	position:absolute;
-	top:50%;
-	width:auto;
-	margin-top:-22px;
-	padding:25px;
-	color:#a9a9a9;
-	font-size:46px;
-	transition:0.6s ease;
-	border-radius:0 2px 2px 0;
-	user-select: none;
-}
-.next {
-  right:0;
-  border-radius:3px 0 0 3px;
-}
-.prev {
-  left:0;
-  border-radius:3px 0 0 3px;
-}
 .dev-img {
 	margin-top:25px;
 	height:auto;
@@ -363,7 +328,10 @@ ul.icons li {
 		width:70%;
 	}
 	.info-panel {
-		height:290px;	
+		height:290px;
+		width:75%;
+		margin-left:auto;
+		margin-right:auto;	
 	}
 	.col .contact-link {
 		line-height:1.5;
@@ -609,6 +577,9 @@ ul.icons li {
 	}
 	.info-panel {
 		height:300px;	
+		width:75%;
+		margin-left:auto;
+		margin-right:auto;
 	}
 	.col .contact-link {
 		font-size:20px;
@@ -773,7 +744,7 @@ header section{
 .nav-col-right li, .nav-col-right li a {
 	text-align:center;
 	line-height:19px;
-	width:7em;
+	width:auto;
 }
 .nav-btn {
 	display:none;
@@ -823,7 +794,6 @@ header section{
 	padding:1.5em 1.5em 0em 1.5em;
 }
 .gallery-banner {
-	padding-top:1.5em;
 	padding-right:3em;
 	max-width:100%;
 	vertical-align: bottom;
@@ -930,6 +900,17 @@ footer .col a:hover {
     align-items: center;
     padding-right:10px;
 }
+.row-gallery-about {
+	display:-ms-flexbox; /* IE10 */
+	display:flex;
+	-ms-flex-wrap:wrap; /* IE10 */
+	flex-wrap:wrap;
+	width:75%;
+	margin: 0 auto;
+	justify-content: center;
+    align-items: center;
+    padding-right:10px;
+}
 .col-gallery {
 	-ms-flex:25%; /* IE10 */
 	flex:25%;
@@ -938,9 +919,7 @@ footer .col a:hover {
 	padding-left:10px;
 }
 .col-panel {
-	-ms-flex:49%; /* IE10 */
-	flex:49%;
-	max-width:50%;
+	width:100%;
 	padding:10px;
 	background-color:#f5f5f5;
 	margin-left:15px;
