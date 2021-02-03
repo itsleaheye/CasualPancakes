@@ -380,10 +380,6 @@ ul.icons li {
 	width: 100%;
 	padding:5em 1.5em 5em 1.5em;
 }
-.row-about {
-		position:absolute;                  
-        bottom:0;
-	}
 	.about-banner {
 		margin-bottom: 3rem !important;
 	}
@@ -440,10 +436,6 @@ ul.icons li {
 	}
 	.dark-panel {
 		max-width:100%;
-	}
-	.row-about {
-		position:absolute;                  
-        bottom:0;
 	}
 	.about-banner {
 		margin-bottom: 3rem !important;
