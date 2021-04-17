@@ -324,6 +324,10 @@ ul.icons li {
 		width: 50%;
 		padding:5em 1.5em 5em 12em;
 	}
+	.row .thumbnail {
+		width:25%;
+		display: block;
+	}
 
 }
 
@@ -374,10 +378,6 @@ ul.icons li {
 	}
 	.category {
 		width:100%;
-	}
-	.row .thumbnail {
-		width:25%;
-		display: block;
 	}
 	.about-banner {
 		margin-bottom: 3em;
