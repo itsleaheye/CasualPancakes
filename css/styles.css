@@ -268,6 +268,14 @@ ul.icons li {
 .clearfix {
 	*zoom: 1;
 }
+
+.row .thumbnail img {
+	width:100%;
+	height:100%;
+	object-position: center;
+	object-fit: cover;
+}
+
 @media screen and (max-width:4100px) {
 	.nav ul {
 		font-size:1.1rem;
@@ -316,6 +324,7 @@ ul.icons li {
 		width: 50%;
 		padding:5em 1.5em 5em 12em;
 	}
+
 }
 
 /*Responsive Design*/
@@ -366,6 +375,14 @@ ul.icons li {
 	.category {
 		width:100%;
 	}
+	.row .thumbnail {
+		width:25%;
+		display: block;
+	}
+	.about-banner {
+		margin-bottom: 3em;
+		display: block;
+	}
 	
 }
 @media screen and (max-width:1600px) {
@@ -384,7 +401,11 @@ ul.icons li {
 	padding:5em 1.5em 5em 1.5em;
 }
 	.about-banner {
-		margin-bottom: 3rem !important;
+		margin-bottom: 3em;	
+	}
+	.row .thumbnail {
+		width:25%;
+		display: block;
 	}
 
 }
@@ -440,8 +461,9 @@ ul.icons li {
 	.dark-panel {
 		max-width:100%;
 	}
-	.about-banner {
-		margin-bottom: 3rem !important;
+	.row .thumbnail {
+		width:25%;
+		display: block;
 	}
 }
 
@@ -618,6 +640,7 @@ ul.icons li {
 	}
 	.profile-img {
 		width: 50% !important;
+		max-width:350px;
 	}
 	.card {
 		background-color: #f4f4f4;
@@ -627,6 +650,10 @@ ul.icons li {
 	.row-about {
 		margin-bottom:-8rem !important;
 		position: relative;
+	}
+	.row .thumbnail {
+		width:25%;
+		display: block;
 	}
 }
 @media screen and (max-width:850px) {
@@ -680,8 +707,9 @@ ul.icons li {
 		padding:2rem !important;
 		margin-top:1rem !important;
 	}
-	.about-banner {
-		margin-bottom:3rem !important;
+	.row .thumbnail {
+		width:50%;
+		display: block;
 	}
 }
 @media screen and (max-width:590px) {
@@ -739,9 +767,6 @@ ul.icons li {
 	text-align:center;
 	margin-left:auto;
 	}
-	.about-banner {
-		margin-bottom:6rem !important;
-	}
 	.card {
 		background-color: #f4f4f4;
 		margin-top: 6rem !important;
@@ -749,6 +774,13 @@ ul.icons li {
 	}
 	.title {
 		font-size:22px !important;
+	}
+	.row .thumbnail {
+		width:100%;
+		display: block;
+	}
+	.about-banner {
+		padding-bottom:4em; 
 	}
 }
 
@@ -1012,11 +1044,6 @@ footer .col a:hover {
 	height:auto;
 	width:100%;
 	vertical-align: baseline;
-	/*padding-left:2rem;
-	padding-right:2rem;
-	margin-bottom:3.2rem;
-	bottom: 0;
-	position: absolute;*/
 }
 .col-gallery img {
 	margin-top:8px;
