@@ -122,7 +122,6 @@ html {
 	display:block;
 	font-size:1.1rem;
 	padding:10px;
-	color:#202;
 	text-decoration:none;
 	background-color:transparent;
 	border:2px solid #f4f4f4;
@@ -137,6 +136,10 @@ html {
 	text-decoration:none;
 	background-color:#f4f4f4;
 	border:2px solid #f4f4f4;
+	transition-duration: 0.5s;
+}
+.order-btn:hover {
+	border:2px solid #282824 !important;
 }
 .dark-panel {
 	background-color:#282824;
@@ -445,6 +448,9 @@ ul.icons li {
 @media screen and (max-width:1100px) {
 	.icons li, .icons a, .icons img {
 		display: none;
+	}
+	.nav li, a:hover {
+		color:#fff !important;
 	}
 	.row-gallery .col-gallery {
 		-ms-flex:99%;
@@ -810,8 +816,9 @@ header section{
 	width:120px;
 	text-align:center;
 }
-.nav li, a:hover{
-	color:#a9a9a9;
+.nav li a:hover{
+	color:#fff;
+	transition-duration: 0.25s;
 }
 .current{
 	color:#ffffff;
