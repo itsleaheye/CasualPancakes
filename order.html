@@ -2,78 +2,84 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">  
-    <link rel="icon" href="img/logoHeader2.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="img/logoHeader2.png">
+	<title>Order</title>
 </head>
 
 <body>
-	<div class="container">
-		<header>
-			<section class="clearfix">	
-				<section class="nav"> 
-				<div class="nav-col nav-col-left">
-					<input type="checkbox" id="nav-check">
-					<div class="nav-btn">
-    					<label for="nav-check">
-      						<span></span>
-      						<span></span>
-      						<span></span>
-    					</label>
- 					</div>
- 					<div class="nav-links">
-						<ul>
-							<li><a href="index.html">home</a></li>
-							<li><a class="current" href="order.html">order</a></li>
-							<li><a href="gallery.html">gallery</a></li>
-							<li><a href="about.html">about</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="nav-col nav-col-right">
-					<ul class="icons">
-						<!-- <li><span class="icon-style"><a href="https://www.fiverr.com/casualpancakes"><img src="img/icon-fiverr.png"/></a></span></li> -->
-						<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"/></a></span></li>
-						<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png"/></a></span></li>
-					</ul>
-				</div>
-			</section>
-			</section>
-		</header>
-		<main class="clearfix">
-			<div class="row row-gallery-about" style="margin-top:4rem;">	
-				<div class="col">
-					<img src="img/commission-prices.jpg" class="com-img" alt="A price list">
-				</div>
-				<div class="col col-order">
-					<h2 class="title" style="margin-bottom:5px">Headshots - $30 CAD</h2>
-					<p style="margin-bottom:2rem">A fully rendered illustration of the torso and up, of any character </p>
-					<h2 class="title" style="margin-bottom:5px">Fullbody - $50 CAD</h2>
-					<p style="margin-bottom:2rem">A fully rendered illustration of any full body character</p>
-					<h2 class="title" style="margin-bottom:5px">DnD Party - $250 CAD</h2>
-					<p style="margin-bottom:2rem">A fully rendered illustration of any (5) full body characters</p>
-					<h2 class="title" style="margin-bottom:5px">Extras</h2>
-					<p style="margin-bottom:2rem">I also offer the following additions to any orders
-						<br>  - Character sheets
-						<br>  - Painted backgrounds
-						<br>  - Familiars and mounts</p>
-						<h4 style="margin-top:1em"><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="current order-btn">Order Form</a></h4>
-				</div>
+	<header>
+		<div class="nav"> 
+			<div class="nav-col nav-col-left">
+				<input type="checkbox" id="nav-check">
+				<label for="nav-check">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a class="current" href="order.html">ORDER</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
 			</div>
-		</main>
-		<footer style="margin-top:1em">
-			<div class="row hr-bar">
-				<div class="text-banner" style="padding-bottom:15px">	
-					<p>Current Que for May Projects: 8</p>
-				</div>
+
+			<div class="nav-col nav-col-right">
+				<ul class="icons">
+					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"/></a></span></li>
+					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png"/></a></span></li>
+				</ul>
 			</div>
-		</footer>
-	</div>
+		</div>
+	</header>
+	<main class="container flex flex-col">
+		<h2>Placing an Order</h2>
+		<p class="subheader" style="color: #282824">Slots re-open on June 2, 2021</p>
+		<p><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p>
+		<section>
+		<h2 style="margin-top: 1em">Pricing Guide</h2>
+		<div class="col-order">
+			<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
+			<section>
+				<h2 class="title" style="margin-bottom:5px">Bust - $30 CAD</h2>
+				<p>A fully rendered illustration of the torso and up of any character </p>
+			</section>
+		</div>
+		<div class="col-order">
+			<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
+			<section>
+				<h2 class="title" style="margin-bottom:5px">Fullbody - $50 CAD</h2>
+				<p>A fully rendered illustration of any full body character</p>
+			</section>
+		</div>
+		<div class="col-order">
+			<img src="img/com-team.jpg" class="com-img" alt="A bust example">
+			<section>
+				<h2 class="title" style="margin-bottom:5px">DnD Party - $250 CAD</h2>
+				<p>A fully rendered illustration of any (5) full body characters</p>
+			</section>
+		</div>
+		<div class="col-order" style="margin-bottom: 2em">
+			<div style="padding:2em 1em">
+				<h2 class="title" style="margin-bottom:5px">Extras</h2>
+				<p>I also offer the following additions to any and all orders:
+					<br>  - Character sheets
+					<br>  - Painted backgrounds
+					<br>  - Familiars and mounts</p>
+			</div>
+		</div>
+		</div>
+	</section>
+	</main>
+	<footer>
+		<p>All content © Leah Nonay "Pancakes"</p>
+	</footer>
 </body>
 </html>
