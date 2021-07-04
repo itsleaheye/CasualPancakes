@@ -299,9 +299,9 @@ figcaption p {
 	line-height: 1.2;
 }
 .order-btn:hover {
-	color:#282824;
-	background-color: #f4f4f4;
-	transition-duration: 0.5S;
+	opacity: 83%;
+	transition-duration: 0.7S;
+	cursor: pointer;
 }
 /*Slide show*/
 .slideshow-container {
@@ -411,6 +411,9 @@ footer p {
     max-width: 300px;
     margin:0 auto;
  }
+.slots-closed {
+	display: none;
+}
 
 /* Responsive */
 @media only screen and (min-width: 1350px) {
@@ -639,7 +642,8 @@ footer p {
 		padding: 0;
 	}
 	.flex-col .subheader {
-		display: none;
+		display: block;
+		font-style: italic;
 	}
 	.order-btn {
 		max-width: 325px !important;
