@@ -33,57 +33,83 @@
 
 			<div class="nav-col nav-col-right">
 				<ul class="icons">
-					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"/></a></span></li>
-					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png"/></a></span></li>
+					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"alt="instagram"/></a></span></li>
+					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png" alt="email"/></a></span></li>
 				</ul>
 			</div>
 		</div>
+		<div class="home-banner content-banner">
+			<img src="img/logo-order.png" alt="the artists order banner"/>
+		</div>
 	</header>
-	<main class="container flex flex-col">
-		<h2 style="margin-top: 1em">Placing an Order</h2>
-		<p class="subheader" style="color: #282824">
-			Wow, that was a lot of orders! <br >
-			<u>Slots will re-open on August 1, 2021</u>
-		</p>
-		<p><a class="order-btn btn" style="cursor:auto !important; opacity: 100% !important">Come Back Soon!</a></p>
-		<p class="slots-closed"><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p>
-		<section>
-		<h2 style="margin-top: 2em">Pricing Guide</h2>
-		<div class="col-order">
-			<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
-			<section>
-				<h2 class="title" style="margin-bottom:5px">Bust - $30 CAD</h2>
-				<p>A fully rendered illustration of the torso and up of any character </p>
-			</section>
+	<main >
+		<div class="row hr-bar order-bar">
+			<!-- <h2 style="color:#fff">Placing an Order</h2> -->
+			<p class="subheader" style="color: #f4f4f4">
+				Wow, that was a lot of orders! <br >
+				<u>Slots will re-open on August 1, 2021</u>
+			</p>
+			<p><a class="order-btn btn" style="cursor:auto !important; opacity: 100% !important">Come Back Soon!</a></p>
+			<p class="slots-closed"><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p>
 		</div>
-		<div class="col-order">
-			<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
-			<section>
-				<h2 class="title" style="margin-bottom:5px">Fullbody - $50 CAD</h2>
-				<p>A fully rendered illustration of any full body character</p>
-			</section>
-		</div>
-		<div class="col-order">
-			<img src="img/com-team.jpg" class="com-img" alt="A bust example">
-			<section>
-				<h2 class="title" style="margin-bottom:5px">DnD Party - $250 CAD</h2>
-				<p>A fully rendered illustration of any (5) full body characters</p>
-			</section>
-		</div>
-		<div class="col-order" style="margin-bottom: 2em">
-			<div style="padding:2em 1em">
-				<h2 class="title" style="margin-bottom:5px">Extras</h2>
-				<p>I also offer the following additions to any and all orders:
-					<br>  - Character sheets
-					<br>  - Painted backgrounds
-					<br>  - Familiars and mounts</p>
+		<section class="container flex flex-col">
+			<h2 style="margin-top: 0.5em">Pricing Guide</h2>
+			<div class="col-order fade-in">
+				<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
+				<section>
+					<h2 class="title" style="margin-bottom:5px">Bust - $30 CAD</h2>
+					<p>A fully rendered illustration of the torso and up of any character </p>
+				</section>
 			</div>
-		</div>
-		</div>
-	</section>
+			<div class="col-order fade-in">
+				<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
+				<section>
+					<h2 class="title" style="margin-bottom:5px">Fullbody - $50 CAD</h2>
+					<p>A fully rendered illustration of any full body character</p>
+				</section>
+			</div>
+			<div class="col-order reveal">
+				<img src="img/com-team.jpg" class="com-img" alt="A bust example">
+				<section>
+					<h2 class="title" style="margin-bottom:5px">DnD Party - $250 CAD</h2>
+					<p>A fully rendered illustration of any (5) full body characters</p>
+				</section>
+			</div>
+			<div class="col-order reveal" style="margin-bottom: 2em">
+				<div style="padding:2em 1em">
+					<h2 class="title" style="margin-bottom:5px">Extras</h2>
+					<p>I also offer the following additions to any and all orders:
+						<br>  - Character sheets
+						<br>  - Painted backgrounds
+						<br>  - Familiars and mounts
+					</p>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer>
 		<p>All content © Leah Nonay "Pancakes"</p>
 	</footer>
+
+	<script>
+		window.addEventListener('scroll', reveal);
+
+		function reveal(){
+			var reveals = document.querySelectorAll('.reveal');
+
+			for(var i = 0; i < reveals.length; i++){
+				var windowY = window.innerHeight;
+				var revealTop = reveals[i].getBoundingClientRect().top;
+				var revealPoint = 50;
+
+				if(revealTop < windowY - revealPoint){
+					reveals[i].classList.add('active');
+				}
+				else{
+					reveals[i].classList.remove('active');
+				}
+			}
+		}
+	</script>
 </body>
 </html>

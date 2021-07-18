@@ -159,6 +159,17 @@ h1, h2,  h3,  p,  a {
 	width:95%;
 	margin-top:.5rem;
 }
+.content-banner {
+	background-position: center;
+}
+.content-banner img {
+	width: 80%;
+	max-width: 300px;
+}
+
+.about-banner {
+	margin-bottom: -2em;
+}
 
 /*Main*/
 header,
@@ -288,8 +299,8 @@ figcaption p {
 	font-size: 1.6em;
 }
 .order-btn {
-	background-color: #282824;
-	color: #f4f4f4;
+	background-color: #f4f4f4;
+	color: #282824;
 	padding: 1rem 4rem;
 	display: block;	
 	text-decoration: none;
@@ -302,6 +313,7 @@ figcaption p {
 	opacity: 83%;
 	transition-duration: 0.7S;
 	cursor: pointer;
+	color: #282824;
 }
 /*Slide show*/
 .slideshow-container {
@@ -341,9 +353,9 @@ figcaption p {
 .hr-bar img {
 	display: none;
 }
-.hr-bar p {
+/*.hr-bar p {
 	font-size: 20px !important;
-}
+	}*/
 
 /*Btn Styles*/
 .btn {
@@ -388,24 +400,14 @@ footer p {
 	opacity:0.3;
 	transition-duration: 0.5s;
 }
-.design-banner {
-	background-position: center;
-}
-.design-banner img {
-	margin-top: -4em;
-}
-
-.about-banner {
-	margin-bottom: -2em;
-}
 .col-about {
 	padding: 2em 1em;
 }
 .profile-img {
-    max-height: 300px;
-    max-width: 300px;
-    margin:0 auto;
- }
+	max-height: 300px;
+	max-width: 300px;
+	margin:0 auto;
+}
 .slots-closed {
 	display: none;
 }
@@ -422,7 +424,7 @@ footer p {
 }
 
 @media only screen and (min-width: 1024px) {
-	
+
 	/*Main*/
 	.home-banner,
 	.home-banner img {
@@ -492,8 +494,8 @@ footer p {
 	.btn a{
 		max-width: 220px;
 	}
-	.flex-col section {
-		max-width: 900px;
+	.flex-col {
+		max-width: 900px !important;
 		margin: 0 auto;
 	}
 	.row .thumbnail {
@@ -502,16 +504,11 @@ footer p {
 	.hr-pad {
 		padding: 3rem 2rem !important;
 	}
-	.design-banner {
-		height: 350px !important;
+	.order-bar {
+		padding: 3em 6em !important;
 	}
-	.about-banner {
-		bottom: 0;
-		margin-bottom: 88px;
-		position: relative;
-		max-width: 900px !important;
-		display: block;
-		margin: 0 auto;
+	.subheader {
+		margin-bottom: 1em;
 	}
 }
 
@@ -636,6 +633,9 @@ footer p {
 	.col-about {
 		padding: 0;
 	}
+	.subheader {
+		width:100%;
+	}
 	.flex-col .subheader {
 		display: block;
 		font-style: italic;
@@ -695,6 +695,26 @@ footer p {
 		display: block;
 		margin: 0 auto;
 	}
-	
-	
+}
+
+/** Animation Styles **/
+.reveal{
+	position: relative;
+	transform: translateY(25px);
+	opacity: 0;
+	transition: all 2s ease;
+}
+
+.reveal.active{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.fade-in {
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

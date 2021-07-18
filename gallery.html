@@ -33,20 +33,20 @@
 
 			<div class="nav-col nav-col-right">
 				<ul class="icons">
-					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"/></a></span></li>
-					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png"/></a></span></li>
+					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"alt="instagram"/></a></span></li>
+					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png" alt="email"/></a></span></li>
 				</ul>
 			</div>
 		</div>
 		
-		<div class="home-banner design-banner">
+		<div class="home-banner content-banner">
 			<img src="img/logo-gallery.png" alt="the artists gallery banner"/>
 		</div>
 	</header>
 	<main class="clearfix">
-		<div class="row hr-bar hr-pad" style="margin-top:-45px">
-			<h2 class="tighten" style="color:#a9a9a9; font-size: 28px;">Character Designs</h2>
-			<br><p class="font-m" style="margin-top: 0.5em">I have designed & illustrated characters for indie companies/startups, and independent clients</p>
+		<div class="row hr-bar hr-pad">
+			<h2 class="tighten fade-in" style="color:#a9a9a9; font-size: 28px;">Character Designs</h2>
+			<br><p class="font-m fade-in" style="margin-top: 0.5em">I have designed & illustrated characters for indie companies/startups, and independent clients</p>
 		</div>
 		<div class="row">
 			<div class="thumbnail">
@@ -76,9 +76,10 @@
 				<img src="img/DnDSarcanna-Peacock.jpg" alt="A pixie swarm ranger"/>
 			</div>
 		</div>
+		<section class="reveal">
 		<div class="row hr-bar hr-pad">
-			<h2 class="tighten" style="color:#a9a9a9; font-size: 28px;">Group Paintings</h2>
-			<br><p class="font-m" style="margin-top: 0.5em">I also offer group commissions and couple portraits in my shop</p>
+			<h2 class="tighten fade-in" style="color:#a9a9a9; font-size: 28px;">Group Paintings</h2>
+			<br><p class="font-m fade-in" style="margin-top: 0.5em">I also offer group commissions and couple portraits in my shop</p>
 		</div>
 		<div class="row">
 			<div class="thumbnail">
@@ -94,10 +95,31 @@
 				<img src="img/DnDRustanmelville.jpg" alt="A dnd party in a tavern"/>
 			</div>
 		</div>
+	</section>
 	</main>
 	<footer>
 		<p>All content © Leah Nonay "Pancakes"</p>
 	</footer>
 </body>
+<script>
+		window.addEventListener('scroll', reveal);
+
+		function reveal(){
+			var reveals = document.querySelectorAll('.reveal');
+
+			for(var i = 0; i < reveals.length; i++){
+				var windowY = window.innerHeight;
+				var revealTop = reveals[i].getBoundingClientRect().top;
+				var revealPoint = 50;
+
+				if(revealTop < windowY - revealPoint){
+					reveals[i].classList.add('active');
+				}
+				else{
+					reveals[i].classList.remove('active');
+				}
+			}
+		}
+	</script>
 
 </html>

@@ -34,25 +34,25 @@
 
 			<div class="nav-col nav-col-right">
 				<ul class="icons">
-					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"/></a></span></li>
-					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png"/></a></span></li>
+					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes"><img src="img/icon-linkedin.png"alt="instagram"/></a></span></li>
+					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png" alt="email"/></a></span></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="home-banner">
-			<img src="img/logo-personal.png" alt="the artists logo/banner"/>
+			<img class="fade-in" src="img/logo-personal.png" alt="the artists logo/banner"/>
 		</div>
 	</header>
 	<main>
 		<div class="row hr-bar">	
-			<div>
+			<div class="fade-in">
 				<p>An illustrator and character designer with a soft spot for fantasy, DnD, and video games.</p>
 				<p class="btn"><a href="order.html" class="btn">Draw My Character</a></p>
 			</div>
 			<img src="img/gallery-shot.png" alt="A stack of portraits layered"/>
 		</div>
-		<div class="row">
+		<div class="row reveal">
 			<div class="container">
 				<div class="col">
 					<span class="avatar-round">
@@ -81,5 +81,27 @@
 	<footer>
 		<p>All content © Leah Nonay "Pancakes"</p>
 	</footer>
+
+	<script>
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++){
+
+        var windowY = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 150;
+
+        if(revealTop < windowY - revealPoint){
+          reveals[i].classList.add('active');
+        }
+        else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+    </script>
 </body>
 </html>
