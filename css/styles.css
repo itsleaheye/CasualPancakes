@@ -62,7 +62,7 @@ h1, h2,  h3,  p,  a {
 	position:relative;
 	display:flex;
 	justify-content: space-between;
-	background-color: #282824;
+	background-color: #a34b4c;
 }
 /* Hamburger Menu */
 .nav label,
@@ -106,7 +106,7 @@ h1, h2,  h3,  p,  a {
 .nav ul li,
 .nav ul li a {
 	display:block;
-	background-color:#212121;
+	background-color:#a34b4c;
 	margin-right: auto;
 	margin-left: auto;
 	text-decoration: none;
@@ -114,8 +114,8 @@ h1, h2,  h3,  p,  a {
 .nav ul li a {
 	padding-top:1rem;
 	padding-bottom: 1rem;
-	color: #a9a9a9;
-	border-bottom:1px solid #3f4140;
+	color: #ffffff;
+	border-bottom:1px solid #c87374;
 	width:100%;
 	font-weight:lighter;
 }
@@ -124,7 +124,7 @@ h1, h2,  h3,  p,  a {
 	transition-duration: 	0.5s;
 }
 .current {
-	color: #ffffff !important;
+	color: #d8be66 !important;
 }
 .icons li, .icons a, .icons img {
 	display: none;
@@ -138,7 +138,7 @@ h1, h2,  h3,  p,  a {
 .home-banner {
 	background-image:url(../img/home-banner.jpg);
 	background-repeat: no-repeat;
-	background-position:top;
+	background-position:center;
 	background-size: cover;
 }
 .home-banner img,
@@ -160,10 +160,9 @@ h1, h2,  h3,  p,  a {
 	margin-top:.5rem;
 }
 .content-banner {
-	background-position: center;
+	background-position: bottom;
 }
 .content-banner img {
-	width: 80%;
 	max-width: 300px;
 }
 
@@ -172,7 +171,6 @@ h1, h2,  h3,  p,  a {
 }
 
 /*Main*/
-header,
 .hr-bar { 
 	background-color: #282824; 
 }
@@ -299,12 +297,12 @@ figcaption p {
 	font-size: 1.6em;
 }
 .order-btn {
-	background-color: #f4f4f4;
-	color: #282824;
-	padding: 1rem 4rem;
+	background-color: #a34b4c;
+	color: #fff;
+	padding: 1rem 3rem;
 	display: block;	
 	text-decoration: none;
-	border: 2px solid #282824;
+	border: 2px solid #d8be66;
 	font-size: 1.2em;
 	margin-top: 1rem !important;
 	line-height: 1.2;
@@ -313,7 +311,7 @@ figcaption p {
 	opacity: 83%;
 	transition-duration: 0.7S;
 	cursor: pointer;
-	color: #282824;
+	color: #ffde1d;
 }
 /*Slide show*/
 .slideshow-container {
@@ -537,10 +535,8 @@ footer p {
 	.nav ul,
 	.nav ul li,
 	.nav ul li a {
-		background-color: #282824;
 		border:none;
 		font-size:1.2rem;
-		color:#a9a9a9;
 	}
 	.nav-col-left  li,
 	.nav ul li a {
@@ -688,12 +684,9 @@ footer p {
 	.col-about section h2 {
 		text-align: left !important;
 	}
-	.about-banner {
-		bottom: 0;
-		position: relative;
-		max-width: 90%;
-		display: block;
-		margin: 0 auto;
+	.content-banner {
+		height: 200px;
+		padding-top:2em;
 	}
 }
 
