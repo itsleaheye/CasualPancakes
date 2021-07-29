@@ -1,3 +1,4 @@
+/*Blue: 4ba2a3*/
 .row,
 .nav {
 	max-width:2000px !important;
@@ -158,9 +159,6 @@ h1, h2,  h3,  p,  a {
 .gallery-banner {
 	width:95%;
 	margin-top:.5rem;
-}
-.content-banner {
-	background-position: bottom;
 }
 .content-banner img {
 	max-width: 300px;
