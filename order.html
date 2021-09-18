@@ -43,62 +43,74 @@
 		</div>
 	</header>
 	<main >
-		<!-- <div class="row hr-bar order-bar">
-			 <h2 style="color:#fff">Placing an Order</h2> 
-			<p class="subheader" style="color: #f4f4f4">
-				Wow, that was a lot of orders! <br >
-				<u>Slots will re-open on August 1, 2021</u>
-			</p>
-			<p><a class="order-btn btn" style="cursor:auto !important; opacity: 100% !important">Come Back Soon!</a></p>
-			<p class="slots-closed"><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p>
-		</div> -->
 		<section class="container flex flex-col">
 			<div class="row order-bar" style="background-color: #f4f4f4; padding:2em">
-				<h2 style="color:#282824">August Update:</h2> 
+				<h2 style="color:#282824">September Update:</h2> 
 				<p class="subheader" style="color: #282824">
-				Wow, that was a lot of orders! <br >
-				<u>Slots will re-open late September</u>
-			</p>
-			<p><a class="order-btn btn" style="cursor:auto !important; opacity: 100% !important">Come Back Soon!</a></p>
+					Wow, that was a lot of orders! <br >
+					<u>Slots will re-open October 1st</u>
+				</p>
+				<p><a class="order-btn btn" style="cursor:auto !important; opacity: 100% !important">Come Back Soon!</a></p>
 			<!-- <h2 style="color:#282824">Get Started:</h2>
 			<p class="subheader" style="color: #282824"> Get your order started by visiting the form below</p>
 			<p><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p> -->
 		</div>
-			<h2 style="margin-top: 0.5em">Pricing Guide</h2>
-			<div class="col-order fade-in">
-				<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
-				<section>
-					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Bust - $40 CAD</h2>
-					<p>A fully rendered illustration of the torso and up of any character </p>
-				</section>
+		<h2 style="margin-top: 0.5em">Pricing Guide</h2>
+		<div class="col-order fade-in">
+			<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
+			<section>
+				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Bust - $40 CAD</h2>
+				<p>A fully rendered illustration of the torso and up of any character </p>
+			</section>
+		</div>
+		<div class="col-order reveal">
+			<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
+			<section>
+				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Cinematic Still - $60 CAD</h2>
+				<p>A fully rendered illustration of the waist and up of any (1) character, with a background </p>
+			</section>
+		</div>
+		<div class="col-order fade-in">
+			<img src="img/com-team.jpg" class="com-img" alt="A bust example">
+			<section>
+				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Fullbody - $70 CAD</h2>
+				<p>A fully rendered illustration of any full body character</p>
+			</section>
+		</div>
+		
+		<div class="col-order reveal" style="margin-bottom: 2em">
+			<div style="padding:2em 1em; background-color: #a34b4c">
+				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Extras</h2>
+				<p style="color:#fff">I also offer the following additions to any and all orders:
+					<br>  - Additional characters
+					<br>  - Digital character sheets
+					<br>  - Painted backgrounds
+					<br>  - Familiars and mounts
+				</p>
 			</div>
-			<div class="col-order fade-in">
-				<img src="img/com-team.jpg" class="com-img" alt="A bust example">
-				<section>
-					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Fullbody - $60 CAD</h2>
-					<p>A fully rendered illustration of any full body character</p>
-				</section>
-			</div>
-			<div class="col-order reveal">
-				<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
-				<section>
-					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Double Trouble - $110 CAD</h2>
-					<p>A fully rendered illustration of any (2) full body characters</p>
-				</section>
-			</div>
-			<div class="col-order reveal" style="margin-bottom: 2em">
-				<div style="padding:2em 1em; background-color: #a34b4c">
-					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Extras</h2>
-					<p style="color:#fff">I also offer the following additions to any and all orders:
-						<br>  - Additional characters
-						<br>  - Digital character sheets
-						<br>  - Painted backgrounds
-						<br>  - Familiars and mounts
-					</p>
-				</div>
-			</div>
-		</section>
-	</main>
+		</div>
+		<!-- <div>
+			<form class="submitOrderForm" action="php/submitOrderForm.php" method="POST">
+				<span class="form-field">
+					<label for="email">Your Email</label>
+					<input type="text" name="senderEmail" required="true">
+				</span>
+
+				<label for="package">Art Package</label>
+				<select name="package" id="package">
+					<option value="bust">Bust</option>
+					<option value="fullBody">Full Body</option>
+					<option value="cinematic">Cinematic</option>
+				</select> 
+				<span class="form-field">
+					<label for="characterTotal">Number of Characters</label>
+					<input type="number" min="1" name="characterTotal" placeholder="1" required="true">
+				</span>
+				<input type="submit" value="submit" name="email">Send Order Request</input>
+			</form>
+			</section>
+		</div> -->
+	</section>
 	<footer>
 		<p>All content © Leah Nonay "Pancakes"</p>
 	</footer>
