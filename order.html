@@ -91,7 +91,7 @@
 		</div>
 		<div>
 			<h2>Order Form Coming Soon...</h2>
-			<form name="submitOrderForm" method="POST" data-netlify="true" netlify>
+			<form name="submitOrderForm" method="POST" data-netlify="true" netlify style="display: none">
 				<span class="form-field">
 					<label for="email">Your Email</label>
 					<input type="text" name="senderEmail" required="true">
@@ -100,8 +100,9 @@
 				<label for="package">Art Package</label>
 				<select name="package" id="package">
 					<option value="bust">Bust</option>
-					<option value="fullBody">Full Body</option>
 					<option value="cinematic">Cinematic</option>
+					<option value="fullBody">Full Body</option>
+					
 				</select> 
 				<span class="form-field">
 					<label for="characterTotal">Number of Characters</label>
