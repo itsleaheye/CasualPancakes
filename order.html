@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" href="img/logoHeader2.png">
 	<title>Order</title>
 </head>
@@ -54,88 +55,119 @@
 			<!-- <h2 style="color:#282824">Get Started:</h2>
 			<p class="subheader" style="color: #282824"> Get your order started by visiting the form below</p>
 			<p><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p> -->
-		</div>
-		<h2 style="margin-top: 0.5em">Pricing Guide</h2>
-		<div class="col-order fade-in">
-			<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
-			<section>
-				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Bust - $40 CAD</h2>
-				<p>A fully rendered illustration of the torso and up of any character </p>
-			</section>
-		</div>
-		<div class="col-order reveal">
-			<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
-			<section>
-				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Cinematic Still - $60 CAD</h2>
-				<p>A fully rendered illustration of the waist and up of any (1) character, with a background </p>
-			</section>
-		</div>
-		<div class="col-order fade-in">
-			<img src="img/com-team.jpg" class="com-img" alt="A bust example">
-			<section>
-				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Fullbody - $70 CAD</h2>
-				<p>A fully rendered illustration of any full body character</p>
-			</section>
-		</div>
-		
-		<div class="col-order reveal" style="margin-bottom: 2em">
-			<div style="padding:2em 1em; background-color: #a34b4c">
-				<h2 class="title" style="margin-bottom:5px; color:#d8be66">Extras</h2>
-				<p style="color:#fff">I also offer the following additions to any and all orders:
-					<br>  - Additional characters
-					<br>  - Digital character sheets
-					<br>  - Painted backgrounds
-					<br>  - Familiars and mounts
-				</p>
 			</div>
-		</div>
-		<div>
-			<h2>Order Form Coming Soon...</h2>
-			<form name="submitOrderForm" method="POST" data-netlify="true" netlify style="display: none">
-				<span class="form-field">
-					<label for="email">Your Email</label>
-					<input type="text" name="senderEmail" required="true">
-				</span>
+			<h2 style="margin-top: 0.5em">Pricing Guide</h2>
+			<div class="col-order fade-in">
+				<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
+				<section>
+					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Bust - $40 CAD</h2>
+					<p>A fully rendered illustration of the torso and up of any character </p>
+				</section>
+			</div>
+			<div class="col-order reveal">
+				<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
+				<section>
+					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Cinematic Still - $60 CAD</h2>
+					<p>A fully rendered illustration of the waist and up of any (1) character, with a background </p>
+				</section>
+			</div>
+			<div class="col-order fade-in">
+				<img src="img/com-team.jpg" class="com-img" alt="A bust example">
+				<section>
+					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Fullbody - $70 CAD</h2>
+					<p>A fully rendered illustration of any full body character</p>
+				</section>
+			</div>
+	
+			<div class="col-order reveal" style="margin-bottom: 2em">
+				<div style="padding:2em 1em; background-color: #a34b4c">
+					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Extras</h2>
+					<p style="color:#fff">I also offer the following additions to any and all orders:
+						<br>  - Additional characters
+						<br>  - Digital character sheets
+						<br>  - Painted backgrounds
+						<br>  - Familiars and mounts
+					</p>
+				</div>
+			</div>
 
-				<label for="package">Art Package</label>
-				<select name="package" id="package">
-					<option value="bust">Bust</option>
-					<option value="cinematic">Cinematic</option>
-					<option value="fullBody">Full Body</option>
-					
-				</select> 
-				<span class="form-field">
-					<label for="characterTotal">Number of Characters</label>
-					<input type="number" min="1" name="characterTotal" placeholder="1" required="true">
-				</span>
-				<button type="submit" disabled="false">Send Order Request</button>
-			</form>
-			</section>
-		</div>
-	</section>
+			<h2>Order Form Coming Soon...</h2>
+			<p style="color:#282824"> Please ignore the below form. Slots are not open. If you can see this form, I am testing its reliability with my domain hosting service</p>
+
+			<div class="row order-bar order-form" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em">
+				<h2 style="color:#a34b4c"><i class="fa fa-paint-brush"></i> Order Request</h2> 
+				<p class="subheader" style="color: #7e7e7e;">
+					Interested in placing an order?
+				</p>
+				<form name="submitOrderForm" method="POST" data-netlify="true" netlify>
+					<span class="form-field">
+						<label for="email">Your Email</label>
+						<input type="text" name="senderEmail" required="true" placeholder="So I can contact you...">
+					</span>
+					<span class="form-field">
+						<label for="package">Art Package</label>
+						<select name="package" id="package">
+							<option value="bust">Bust</option>
+							<option value="cinematic">Cinematic</option>
+							<option value="fullBody">Full Body</option>
+						</select> 
+						<i class="tooltip">**Multiple characters recieve a $10 discount**</i>
+					</span>
+					<span class="form-field">
+						<label for="characterTotal">Number of Characters</label>
+						<input type="number" min="1" name="characterTotal" placeholder="1" required="true">
+					</span>
+					<span class="form-field">
+						<label for="extras">Extras?</label>
+						<fieldset name="extras">
+							<input type="checkbox" name="smallFamiliar" value="smallFamiliar">Small Familiar - $10<br>
+							<input type="checkbox" name="bigFamiliar" value="largeFamiliar">Large Familiar or Mount - $20<br>
+							<input type="checkbox" name="background" value="Background">Custom Background - $5<br>
+							<input type="checkbox" name="digitalCharacterSheet" value="DigitalCharacterSheet">Digital Character Sheet - $5<br>
+						</fieldset>      
+					</span>
+					<span class="form-field">
+						<label for="characterDetails">Details</label>
+						<textarea name="characterDetails" required="true">Any details about your characters: Character descriptions (race, hair, skin tones, armor, etc.), desired pose, etc.</textarea>
+						<i class="tooltip">**Also include any details that relate to chosen extras**</i>
+					</span>
+					<span class="form-field">
+						<label for="characterFiles">Reference Files</label>
+						<input type="file" id="characterFiles" name="characterFiles" multiple size="60%">
+					</span>
+					<button class="order-btn form-btn btn" type="submit" disabled="false">
+						<i class="fa fa-paper-plane"></i> Send Request
+					</button>
+				</form>
+			</div>
+		</section>
+	</main>
 	<footer>
-		<p>All content © Leah Nonay "Pancakes"</p>
+		<p style="font-size: 1.4em">Disclaimer:
+			<br/>- I will review your order request and get back to you within 48hrs
+			<br/>- This art is not to be re-distributed for commercial use
+		</p>
 	</footer>
 
-	<script>
-		window.addEventListener('scroll', reveal);
+<script>
+	window.addEventListener('scroll', reveal);
 
-		function reveal(){
-			var reveals = document.querySelectorAll('.reveal');
+	function reveal(){
+		var reveals = document.querySelectorAll('.reveal');
 
-			for(var i = 0; i < reveals.length; i++){
-				var windowY = window.innerHeight;
-				var revealTop = reveals[i].getBoundingClientRect().top;
-				var revealPoint = 50;
+		for(var i = 0; i < reveals.length; i++){
+			var windowY = window.innerHeight;
+			var revealTop = reveals[i].getBoundingClientRect().top;
+			var revealPoint = 50;
 
-				if(revealTop < windowY - revealPoint){
-					reveals[i].classList.add('active');
-				}
-				else{
-					reveals[i].classList.remove('active');
-				}
+			if(revealTop < windowY - revealPoint){
+				reveals[i].classList.add('active');
+			}
+			else{
+				reveals[i].classList.remove('active');
 			}
 		}
-	</script>
+	}
+</script>
 </body>
 </html>
