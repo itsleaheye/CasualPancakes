@@ -91,10 +91,10 @@
 				</div>
 			</div>
 
-			<!-- <h2 style="display: block;">Order Form Coming Soon...</h2> -->
-			<!-- <p style="color:#282824"> Please ignore the below form. Slots are not open. If you can see this form, I am testing its reliability with my domain hosting service</p> -->
+			<h2 style="display: block;">Order Form Coming Soon...</h2>
+			<p style="color:#282824"> Please ignore the below form. Slots are not open. If you can see this form, I am testing its reliability with my domain hosting service</p>
 
-			<div class="row order-bar order-form" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em; display:none">
+			<div class="row order-bar order-form" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em;">
 				<h2 style="color:#a34b4c"><i class="fa fa-paint-brush"></i> Order Request</h2> 
 				<p class="subheader" style="color: #7e7e7e;">
 					Interested in placing an order?
@@ -115,7 +115,7 @@
 					</span>
 					<span class="form-field">
 						<label for="characterTotal">Number of Characters</label>
-						<input type="number" min="1" name="characterTotal" placeholder="1" required="true">
+						<input type="number" min="1" max="6" name="characterTotal" placeholder="1" required="true">
 					</span>
 					<span class="form-field">
 						<label for="extras">Extras?</label>
@@ -128,14 +128,15 @@
 					</span>
 					<span class="form-field">
 						<label for="characterDetails">Details</label>
-						<textarea name="characterDetails" required="true">Any details about your characters: Character descriptions (race, hair, skin tones, armor, etc.), desired pose, etc.</textarea>
+						<textarea name="characterDetails" required="true" id="characterDetails" form="submitOrderForm" placeholder="Any details about your characters: Character descriptions (race, hair, skin tones, armor, etc.), desired pose, etc."></textarea>
 						<i class="tooltip">**Also include any details that relate to chosen extras**</i>
 					</span>
 					<span class="form-field">
-						<label for="characterFiles">Reference Files</label>
-						<input type="file" id="characterFiles" name="characterFiles" multiple size="60%">
+						<label for="characterFiles">Reference File</label>
+						<input type="file" id="characterFiles" name="characterFiles" size="60%">
+						<i class="tooltip">**Please zip your files if you have more than 1 reference**</i>
 					</span>
-					<button class="order-btn form-btn btn" type="submit" disabled="false">
+					<button class="order-btn form-btn btn" type="submit">
 						<i class="fa fa-paper-plane"></i> Send Request
 					</button>
 				</form>
