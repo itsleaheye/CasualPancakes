@@ -44,24 +44,27 @@
 		</div>
 	</header>
 	<main >
-		<section class="container flex flex-col">
+		<section class="container flex flex-col" style="margin-bottom: 2em">
 			<div class="row order-bar" style="background-color: #f4f4f4; padding:2em">
+				<!-- Slots Closed -->
 				<h2 style="color:#282824">September Update:</h2> 
 				<p class="subheader" style="color: #282824">
 					Wow, that was a lot of orders! <br >
 					<u>Slots will re-open October 1st</u>
 				</p>
 				<p><a class="order-btn btn" style="cursor:auto !important; opacity: 100% !important">Come Back Soon!</a></p>
-			<!-- <h2 style="color:#282824">Get Started:</h2>
-			<p class="subheader" style="color: #282824"> Get your order started by visiting the form below</p>
-			<p><a href="https://forms.gle/bn1Ym8vURD8fUygx9" class="order-btn btn">Start Your Order</a></p> -->
+
+				<!-- Slots Open -->
+			<!-- <h2 style="color:#282824">Slots Are Open:</h2>
+			<p class="subheader" style="color: #282824"> Get started by visiting the order form below, or by hitting this button!</p>
+			<p><button class="order-btn btn" onclick="smoothScroll(document.getElementById('orderForm'))">Start Your Order</button></p> -->
 			</div>
 			<h2 style="margin-top: 0.5em">Pricing Guide</h2>
 			<div class="col-order fade-in">
 				<img src="img/com-bust.jpg" class="com-img" alt="A bust example">
 				<section>
 					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Bust - $40 CAD</h2>
-					<p>A fully rendered illustration of the torso and up of any character </p>
+					<p>A fully rendered illustration of the chest and up of any character </p>
 				</section>
 			</div>
 			<div class="col-order fade-in">
@@ -91,10 +94,7 @@
 				</div>
 			</div>
 
-			<h2 style="display: block;">Order Form Coming Soon...</h2>
-			<p style="color:#282824"> Please ignore the below form. Slots are not open. If you can see this form, I am testing its reliability with my domain hosting service</p>
-
-			<div class="row order-bar order-form reveal" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em;">
+			<div id="orderForm" class="row order-bar order-form reveal" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em; display: none;">
 				<h2 style="color:#a34b4c"><i class="fa fa-paint-brush"></i> Order Request</h2> 
 				<p class="subheader" style="color: #7e7e7e;">
 					Interested in placing an order?
@@ -168,6 +168,29 @@
 				reveals[i].classList.remove('active');
 			}
 		}
+	}
+
+	window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = -20;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 	}
 </script>
 </body>

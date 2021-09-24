@@ -407,9 +407,6 @@ footer p {
 }
 
 /*Forms*/
-.order-form {
-	width:80% !important;
-}
 .form-field {
 	display: block;
 	width: 100%;
@@ -424,8 +421,8 @@ label {
 
 }
 input[type="file"] {
-    background-color: #ffffff;
-    height: auto;
+	background-color: #ffffff;
+	height: auto;
 }
 input[type="text"],
 input[type="number"],
