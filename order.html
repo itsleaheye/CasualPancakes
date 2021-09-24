@@ -64,7 +64,7 @@
 					<p>A fully rendered illustration of the torso and up of any character </p>
 				</section>
 			</div>
-			<div class="col-order reveal">
+			<div class="col-order fade-in">
 				<img src="img/com-fullbody.jpg" class="com-img" alt="A bust example">
 				<section>
 					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Cinematic Still - $60 CAD</h2>
@@ -94,12 +94,12 @@
 			<h2 style="display: block;">Order Form Coming Soon...</h2>
 			<p style="color:#282824"> Please ignore the below form. Slots are not open. If you can see this form, I am testing its reliability with my domain hosting service</p>
 
-			<div class="row order-bar order-form" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em;">
+			<div class="row order-bar order-form reveal" style="background-color: #f4f4f4; padding:2em; margin-bottom:4em;">
 				<h2 style="color:#a34b4c"><i class="fa fa-paint-brush"></i> Order Request</h2> 
 				<p class="subheader" style="color: #7e7e7e;">
 					Interested in placing an order?
 				</p>
-				<form name="submitOrderForm" method="POST" data-netlify="true" netlify>
+				<form id="submitOrderForm" method="POST" data-netlify="true" netlify action="/thanks.html">
 					<span class="form-field">
 						<label for="email">Your Email</label>
 						<input type="text" name="senderEmail" required="true" placeholder="So I can contact you...">
@@ -120,21 +120,21 @@
 					<span class="form-field">
 						<label for="extras">Extras?</label>
 						<fieldset name="extras">
-							<input type="checkbox" name="smallFamiliar" value="smallFamiliar">Small Familiar - $10<br>
-							<input type="checkbox" name="bigFamiliar" value="largeFamiliar">Large Familiar or Mount - $20<br>
-							<input type="checkbox" name="background" value="Background">Custom Background - $5<br>
-							<input type="checkbox" name="digitalCharacterSheet" value="DigitalCharacterSheet">Digital Character Sheet - $5<br>
+							<input type="checkbox" name="smallFamiliar" value="yes">Small Familiar - $10<br>
+							<input type="checkbox" name="largeFamiliar" value="yes">Large Familiar or Mount - $20<br>
+							<input type="checkbox" name="background" value="yes">Custom Background - $5<br>
+							<input type="checkbox" name="digitalCharacterSheet" value="yes">Digital Character Sheet - $5<br>
 						</fieldset>      
 					</span>
 					<span class="form-field">
 						<label for="characterDetails">Details</label>
-						<textarea name="characterDetails" required="true" id="characterDetails" form="submitOrderForm" placeholder="Any details about your characters: Character descriptions (race, hair, skin tones, armor, etc.), desired pose, etc."></textarea>
+						<textarea name="characterDetails" form="submitOrderForm" placeholder="Any details about your characters: Character descriptions (race, hair, skin tones, armor, etc.), desired pose, etc."></textarea>
 						<i class="tooltip">**Also include any details that relate to chosen extras**</i>
 					</span>
 					<span class="form-field">
 						<label for="characterFiles">Reference File</label>
 						<input type="file" id="characterFiles" name="characterFiles" size="60%">
-						<i class="tooltip">**Please zip your files if you have more than 1 reference**</i>
+						<i class="tooltip">**Limit of 1 file**</i>
 					</span>
 					<button class="order-btn form-btn btn" type="submit">
 						<i class="fa fa-paper-plane"></i> Send Request
