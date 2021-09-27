@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" type='text/css'> <!--font awesome library-->
 	<script src="js/html5shiv.js"></script>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -48,7 +49,7 @@
 		<div class="row hr-bar">	
 			<div class="fade-in">
 				<p>An illustrator and character designer with a soft spot for fantasy, DnD, and video games.</p>
-				<p style="margin-top: 2em"><a href="order.html" class="order-btn">Draw My Character</a></p>
+				<p style="margin-top: 2em"><a href="order.html" class="order-btn"><i class="fa fa-paint-brush" style="margin-right: 0.5em"></i> Draw My Character</a></p>
 			</div>
 			<img src="img/gallery-shot.png" alt="A stack of portraits layered"/>
 		</div>
@@ -83,25 +84,25 @@
 	</footer>
 
 	<script>
-    window.addEventListener('scroll', reveal);
+		window.addEventListener('scroll', reveal);
 
-    function reveal(){
-      var reveals = document.querySelectorAll('.reveal');
+		function reveal(){
+			var reveals = document.querySelectorAll('.reveal');
 
-      for(var i = 0; i < reveals.length; i++){
+			for(var i = 0; i < reveals.length; i++){
 
-        var windowY = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = 150;
+				var windowY = window.innerHeight;
+				var revealTop = reveals[i].getBoundingClientRect().top;
+				var revealPoint = 150;
 
-        if(revealTop < windowY - revealPoint){
-          reveals[i].classList.add('active');
-        }
-        else{
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-    </script>
+				if(revealTop < windowY - revealPoint){
+					reveals[i].classList.add('active');
+				}
+				else{
+					reveals[i].classList.remove('active');
+				}
+			}
+		}
+	</script>
 </body>
 </html>
