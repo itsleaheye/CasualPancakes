@@ -21,6 +21,7 @@ h1 {
 }
 h2 {
   font-size: 2rem;
+  font-weight: 800;
   color: #a9a9a9;
 }
 h3 {
@@ -288,17 +289,27 @@ figcaption p {
 .half {
   max-width: 100vw;
 }
-.col-order {
+.col-order,
+.col-about {
   margin-top: 1rem;
   background-color: #f4f4f4;
 }
-.col-order section {
+.col-order section,
+.col-about {
   padding: 2rem 1rem;
+}
+.col-about {
+  flex-direction: column;
+}
+.col-about img {
+  width: 100%;
+  height: 100%;
 }
 .padding {
   padding: 2rem;
 }
-.col-order h1 {
+.col-order h1,
+.col-about h1 {
   width: 100%;
   color: #282824;
   font-size: 2.4em;
@@ -306,13 +317,17 @@ figcaption p {
   margin-top: -2em;
   font-weight: 800;
 }
-.col-order h2 {
+.col-order h2,
+.col-about h2 {
   font-size: 2em;
   font-weight: 500;
 }
-.col-order p {
+.col-order p,
+.col-about p {
   color: #7e7e7e;
   font-size: 1.6em;
+  max-width: 575px;
+  margin: 0 auto;
 }
 .order-btn {
   background-color: #a34b4c;
@@ -416,8 +431,13 @@ footer p {
   transition-duration: 0.5s;
 }
 .col-about {
-  padding: 2em 1em;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 815px;
 }
+
 .profile-img {
   max-height: 300px;
   max-width: 300px;
@@ -718,7 +738,8 @@ input[type="checkbox"] {
     width: 100%;
     padding: 3em 2em;
   }
-  .col-order div {
+  .col-order div,
+  .col-about div {
     padding: 2em 2em;
     width: 100%;
   }
@@ -783,6 +804,13 @@ input[type="checkbox"] {
   .content-banner {
     height: 200px;
     padding-top: 2em;
+  }
+  .col-about section {
+    width: 67%;
+    padding: 3em 3em !important;
+  }
+  .col-about img {
+    width: 33%;
   }
 }
 

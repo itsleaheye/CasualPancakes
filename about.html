@@ -1,81 +1,115 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <script src="js/html5shiv.js"></script>
+    <link rel="icon" href="img/logoHeader2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<title>About</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-	<script src="js/html5shiv.js"></script>
-	<link rel="icon" href="img/logoHeader2.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="nav-col nav-col-left">
+          <input type="checkbox" id="nav-check" />
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="order.html">ORDER</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a class="current" href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
 
-<body>
-	<header>
-		<div class="nav"> 
-			<div class="nav-col nav-col-left">
-				<input type="checkbox" id="nav-check">
-				<label for="nav-check">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="order.html">ORDER</a></li>
-					<li><a href="gallery.html">GALLERY</a></li>
-					<li><a class="current" href="about.html">ABOUT</a></li>
-				</ul>
-			</div>
+        <div class="nav-col nav-col-right">
+          <ul class="icons">
+            <li>
+              <span class="icon-style"
+                ><a href="https://www.instagram.com/casualpancakes/"
+                  ><img src="img/icon-linkedin.png" alt="instagram" /></a
+              ></span>
+            </li>
+            <li>
+              <span class="icon-style"
+                ><a href="mailto:casualpancakesdraws@gmail.com"
+                  ><img src="img/icon-email.png" alt="email" /></a
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-			<div class="nav-col nav-col-right">
-				<ul class="icons">
-					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes/"><img src="img/icon-linkedin.png"alt="instagram"/></a></span></li>
-					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png" alt="email"/></a></span></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="home-banner content-banner">
-			<img src="img/logo-about.png" alt="the artists about banner"/>
-		</div>
-	</header>
-	<main class="container flex flex-col">
-		<section>
-			<h2 style="margin-top: 1em">Meet the Artist</h2>
-			<div class="col-order col-about fade-in">
-				<img src="img/myface.jpg" class="feature-img profile-img" alt="A portrait of Leah Nonay">
-				<section>
-					<h2 class="title" style="margin-bottom:5px; color:#d8be66">Hello!</h2>
-					<p> My name is Leah, but I am also known as <span style="font-weight:bolder">CasualPancakes</span>! I'm a freelance digital artist and full-stack developer from Alberta, Canada. 
-					</p>
-				</section>
-			</div>
-			<div class="col-order fade-in" style="margin-bottom: 2em">
-				<div style="padding:2em; background-color:#a34b4c">
-					<h2 class="title" style="margin-bottom:5px; color:#d8be66">About My Art</h2>
-					<p style="color:#fff">I manage my own digital artwork business, as I have <span style="font-weight:bolder">completed over 300 projects</span> with clients from across the globe.
-					<br><br>I also have experience in illustration, character design, graphic design, book illustration, games (both tabletop and virtual), etc. </p>
-				</div>
-			</div>
-			<!-- <div class="col-order" style="margin-bottom: 2em">
-				<div style="padding:2em 1em">
-					<h2 class="title" style="margin-bottom:5px">My Hobbies</h2>
-					<p> - Drinking *lots* of coffee & tea
-						<br> - Video Games
-						<br> - Coding
-						<br> - Photography</p>
-				</div>
-			</div> -->
-		</section>
-		<div class="row" style="margin-bottom: -2em; margin-top: 2em;"><img class="about-banner" src="img/gallery-shot-about.png" alt="A stack of portraits layered"></div>
-	</main>
-	<footer>
-		<p>All content © Leah Nonay "Pancakes"</p>
-	</footer>
-</body>
+      <div class="home-banner content-banner">
+        <img src="img/logo-about.png" alt="the artists about banner" />
+      </div>
+    </header>
+    <main class="container flex flex-col">
+      <section>
+        <h2 style="margin-top: 1em">Meet the Artist</h2>
+        <div class="col-about fade-in">
+          <img
+            src="img/myface.jpg"
+            class="feature-img profile-img"
+            alt="A portrait of Leah Nonay"
+          />
+          <section>
+            <h2 class="title" style="margin-bottom: 5px; color: #d8be66">
+              Hello!
+            </h2>
+            <p>
+              My name is Leah, but I am also known as
+              <span style="font-weight: bolder">CasualPancakes</span>! <br />I
+              am a freelance digital artist, and a full-stack software developer
+              from Alberta, Canada.
+            </p>
+          </section>
+        </div>
+        <div class="col-order fade-in" style="margin: 2em auto">
+          <div style="padding: 2em; background-color: #a34b4c">
+            <h2 class="title" style="margin-bottom: 5px; color: #d8be66">
+              About My Art
+            </h2>
+            <p style="color: #fff">
+              I manage my own digital artwork business, as I have
+              <span style="font-weight: bolder"
+                >completed over 300 projects</span
+              >
+              with clients from across the globe. <br /><br />I also have
+              experience in illustration, character design, graphic design, book
+              illustration, games (both tabletop and virtual), etc.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="row" style="margin-bottom: -2em; margin-top: 2em">
+        <img
+          class="about-banner"
+          src="img/gallery-shot-about.png"
+          alt="A stack of portraits layered"
+        />
+      </div>
+    </main>
+    <footer>
+      <p>All content © Leah Nonay "Pancakes"</p>
+    </footer>
+  </body>
 </html>
