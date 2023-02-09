@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="img/logoHeader2.png">
+	<title>Gallery</title>
+</head>
+
+<body class="index-bg">
+	<header>
+		<div class="nav"> 
+			<div class="nav-col nav-col-left">
+				<input type="checkbox" id="nav-check">
+				<label for="nav-check">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="order.html">ORDER</a></li>
+					<li><a class="current" href="gallery.html">GALLERY</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
+			</div>
+
+			<div class="nav-col nav-col-right">
+				<ul class="icons">
+					<li><span class="icon-style"><a href="https://www.instagram.com/casualpancakes/"><img src="img/icon-linkedin.png"alt="instagram"/></a></span></li>
+					<li><span class="icon-style"><a href="mailto:casualpancakesdraws@gmail.com"><img src="img/icon-email.png" alt="email"/></a></span></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="home-banner content-banner">
+			<img src="img/logo-gallery.png" alt="the artists gallery banner"/>
+		</div>
+	</header>
+	<main class="clearfix">
+		<div class="row hr-bar hr-pad">
+			<h2 class="tighten fade-in" style="color:#d8be66; font-size: 28px;">Character Designs</h2>
+			<br><p class="font-m fade-in" style="margin-top: 0.5em">I have designed & illustrated characters for indie companies/startups, and independent clients</p>
+		</div>
+		<div class="row">
+			<div class="thumbnail">
+				<img src="img/DnDEmpnero2.jpg" alt="A sorcerer and his dragon"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDFawkespryde-Dark.jpg" alt="A fun-guy"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDAZeroselfcontrol.jpg" alt="A pallid scribe elf"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDQuinna.jpg" alt="A tiefling druid of the circle"/>
+			</div>
+		</div>
+		<div class="row hidden-gallery">
+			<div class="thumbnail">
+				<img src="img/DnDSarcanna-Peacock.jpg" alt="A sakura themed ninja"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDAlakasamb.jpg" alt="A fire genasi"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDLurker746.jpg" alt="A pallid scribe elf"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDIllariaVisentin-Glow.jpg" alt="A pixie swarm ranger"/>
+			</div>
+		</div>
+		<section class="reveal">
+		<div class="row hr-bar hr-pad">
+			<h2 class="tighten fade-in" style="color:#d8be66; font-size: 28px;">Group Paintings</h2>
+			<br><p class="font-m fade-in" style="margin-top: 0.5em">I also offer group commissions and couple portraits in my shop</p>
+		</div>
+		<div class="row">
+			<div class="thumbnail">
+				<img src="img/DnDDoanRoessler.jpg" alt="A dnd party under the blood moon of Strahd"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDSayethwe-Groupped.jpg" alt="A dnd party lineup"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDMonstrousprince.jpg" alt="A couple, Strahd and his wife, a pink tiefling"/>
+			</div>
+			<div class="thumbnail">
+				<img src="img/DnDRustanmelville.jpg" alt="A dnd party in a tavern"/>
+			</div>
+		</div>
+	</section>
+	</main>
+	<footer>
+		<p>All content © Leah Nonay "Pancakes"</p>
+	</footer>
+</body>
+<script>
+		window.addEventListener('scroll', reveal);
+
+		function reveal(){
+			var reveals = document.querySelectorAll('.reveal');
+
+			for(var i = 0; i < reveals.length; i++){
+				var windowY = window.innerHeight;
+				var revealTop = reveals[i].getBoundingClientRect().top;
+				var revealPoint = 50;
+
+				if(revealTop < windowY - revealPoint){
+					reveals[i].classList.add('active');
+				}
+				else{
+					reveals[i].classList.remove('active');
+				}
+			}
+		}
+	</script>
+
+</html>
