@@ -1,11 +1,16 @@
-# CasualPancakes
-My art portfolio and communication platform for my freelance business
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/61296534/217725259-c0afe3ec-b5e4-46f5-adc2-06b5dbb78a90.png" width="450"/>
+</p>
 
 
-# Features
-* Responsive Design - Formatting adjusts as the screen resolution adjusts
-* Interactive Order Form - Enforces validation requirements met before submittion. Automatically stores clients order forms on the back end. Only viewable when slots are currently open.
-* Contact links - Easily accessed through the header
+# CasualPancakes | [View Live](https://casualpancakes.com)
+My art portfolio and communication platform for my freelance business.
 
-# Live Link
-https://casualpancakes.com/
+All images and content within this portfolio belong to and were created by myself. They are not free to be re-used.
+* Languages - HTML, JavaScript, SCSS with CSS compression
+* Libraries - FontAwesome Icons, Google Fonts
+* IDE - Visual Studio Code
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/61296534/217725636-0f93bc33-4327-4f36-8107-12b0f7abc2c8.png" width="750"/>
+</p>
