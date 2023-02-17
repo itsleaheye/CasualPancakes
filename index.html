@@ -19,16 +19,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Satisfy&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=La+Belle+Aurore&family=Open+Sans:wght@300;400;500;600;700;800&family=Quattrocento+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <!-- Style Sheet Imports -->
@@ -38,259 +32,291 @@
     <title>CasualPancakes</title>
   </head>
   <body>
+    <!-- Navigational Menu -->
     <header id="index">
-      <!-- Navigation & Menu -->
       <div class="nav">
         <input type="checkbox" id="nav-check" />
         <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div></div>
+          <div></div>
+          <div></div>
         </label>
         <ul>
-          <li onclick="location.href='#home'"><img src="img/favicon.png" /></li>
+          <li onclick="location.href='#home'">
+            <img src="img/logo-personal.png" />
+          </li>
           <li><a href="#about">about</a></li>
           <li><a href="#order">order</a></li>
           <li><a href="#gallery">gallery</a></li>
         </ul>
       </div>
       <div class="banner" id="home">
-        <img
-          class="banner-logo"
-          src="img/logo-personal.png"
-          alt="CasualPancakes logo"
-        />
-        <div class="row fade-in">
-          <div
-            class="col clickable"
-            onclick="window.location='https://www.fiverr.com/casualpancakes'"
-          >
-            <img src="img/thumbnail-order.jpg" alt="Self portrait" />
-            <p>Past client testimonials</p>
-            <button>Reviews</button>
-          </div>
-          <div class="col clickable internal" onclick="location.href='#order'">
-            <img src="img/thumbnail-gallery.jpg" alt="Self portrait" />
-            <p>Start an order</p>
-            <button>Order</button>
-          </div>
-          <div class="col clickable internal" onclick="location.href='#gallery'">
-            <img src="img/thumbnail-avatar.png" alt="Self portrait" />
-            <p>View more creations</p>
-            <button>Gallery</button>
+        <div class="banner-content">
+          <img src="img/blob.png" alt="self portrait in artsy blobs" />
+          <div>
+            <h1>Casual<br />Pancakes</h1>
+            <div class="line"></div>
+            <p>a canadian artist & character designer</p>
           </div>
         </div>
       </div>
     </header>
+    <!-- Page Views -->
     <main>
       <!-- About Section -->
       <div class="full-container fade-in" id="about">
         <div class="block-left">
-          <span class="fade-in">
+          <div class="custom-shape">
+            <svg
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"
+              ></path>
+            </svg>
+          </div>
+          <div class="fade-in">
             <h1 class="script">Hello!</h1>
             <img
               class="fade-in"
-              src="img/thumbnail-avatar.png"
+              src="img/thumbnail-avatar.jpg"
               alt="Self portrait of CasualPancakes"
             />
             <p>My name is Leah, but I am also known as CasualPancakes!</p>
-          </span>
+          </div>
         </div>
         <div class="block-right">
-          <span class="fade-in">
+          <div class="custom-shape">
+            <svg
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              ></path>
+            </svg>
+          </div>
+          <div class="fade-in">
             <p class="dark-text bolder">
               I am a digital artist, designer, and software engineer from
               Alberta, Canada.
             </p>
             <p>
               I manage my own freelance digital artwork business, as I have
-              completed over 300 projects with clients from across the globe. Speaking of, I am available for 
-              small illustration projects so feel free to reach out.
+              completed over 300 projects with clients from across the globe.
               <br /><br />
-              In my decade of experience I have explored the worlds of illustration, character design, graphic
-              design, book illustration, game asset design (both tabletop and virtual), and more!
+              In my decade of experience I have explored the worlds of
+              illustration, character design, graphic design, book illustration,
+              game asset design (both tabletop and virtual), and more!
             </p>
-          </span>
+          </div>
         </div>
       </div>
       <!-- Order Section -->
       <div class="row text-banner" id="order">
         <img class="header-banner" src="img/banner-order.png" alt="Ordering" />
-          <div class="row fade-in">
-            <div class="col">
-              <div class="price-token">
-                <img src="img/com-headshot.jpg" alt="Headshot sample" />
-                <h3 class="script">$40</h3>
-              </div>
-              <h3>Head Shot</h3>
-              <p>
-                A fully rendered illustration of the chest and up of any character
-              </p>
+        <div class="row fade-in">
+          <div class="col">
+            <div class="price-token">
+              <img src="img/com-headshot.jpg" alt="Headshot sample" />
+              <h3 class="script">$40</h3>
             </div>
-            <div class="col">
-              <div class="price-token">
-                <img src="img/com-still.jpg" alt="Still sample" />
-                <h3 class="script">$60</h3>
-              </div>
-              <h3>Scene Still</h3>
-              <p>
-                A fully rendered illustration of the waist up, of any
-                character, background, and quote
-              </p>
-            </div>
-            <div class="col">
-              <div class="price-token">
-                <img src="img/com-fullbody.jpg" alt="Fullbody sample" />
-                <h3 class="script">$80</h3>
-              </div>
-              <h3>Fullbody</h3>
-              <p>A fully rendered illustration of any full body character</p>
-            </div>
+            <h3>Head Shot</h3>
+            <p>
+              A fully rendered illustration of the chest and up of any character
+            </p>
           </div>
-          <div class="row fade-in">
-            <div class="wide-col">
-              <h2><i class="fa-brands fa-pagelines"></i>  Extras</h2>
-              <p>
-                I also offer the following additions to all orders:
-                <br />- Additional characters <br />- Digital character sheet
-                (view example) <br />- Painted backgrounds <br />- Familiars and
-                mounts
-              </p>
-              <button class="button-hollow" onclick="show()">
-                <i class="fa fa-paper-plane"></i>  Start My Order
-              </button>
+          <div class="col">
+            <div class="price-token">
+              <img src="img/com-still.jpg" alt="Still sample" />
+              <h3 class="script">$60</h3>
             </div>
+            <h3>Scene Still</h3>
+            <p>
+              A fully rendered illustration of the waist up, of any character,
+              background, and quote
+            </p>
           </div>
-          <div class="modal" id="modal">
-            <form
-              id="submitOrderForm"
-              method="POST"
-              data-netlify="true"
-              netlify
-            >
-              <span class="form-field">
-                <label for="email">Your Email*</label>
-                <input type="email" name="senderEmail" required="true" placeholder="ie. artplease@gmail.com">
-              </span>
-              <span class="form-field">
-                <label for="package">Art Package</label>
-                <select name="package" id="package">
-                  <option value="bust">Token</option>
-                  <option value="cinematic">Cinematic</option>
-                  <option value="fullBody">Full Body</option>
-                </select>
-              </span>
-              <span class="form-field">
-                <label for="characterTotal">Number of Characters*</label>
-                <input type="number" min="1" max="6" name="characterTotal" placeholder="0" required="true">
-              </span>
-              <span class="form-field">
-                <label for="extras">Extras?</label>
-                <fieldset name="extras">
-                  <input type="checkbox" name="smallFamiliar" value="yes">Small
-                  Familiar - $10<br>
-                  <input type="checkbox" name="largeFamiliar" value="yes">Large
-                  Familiar or Mount - $20<br>
-                  <input type="checkbox" name="background" value="yes">Custom
-                  Background - $5<br>
-                  <input type="checkbox" name="digitalCharacterSheet" value="yes">Digital Character Sheet - $3<br>
-                </fieldset>
-              </span>
-              <span class="form-field">
-                <label for="characterDetails">Details</label>
-                <textarea name="characterDetails" form="submitOrderForm" placeholder="Any details about your characters: descriptions (race, hair, skin tones, armor, etc.), desired pose, etc."></textarea>
-              </span>
-              <span class="form-field">
-                <label class="file-upload" for="characterFiles">
-                  Select Reference Image
-                  <br/><i class="fa-solid fa-camera-retro"></i> 
-                  <input type="file" id="characterFiles" name="characterFiles" size="60%">
-                </label>
-              </span>
-              <button type="submit">
-                <i class="fa fa-paper-plane"type="submit"></i>  Submit Order
-              </button>
-              <p class="dark-text" onclick="hide()">Cancel</p>
-            </form>
-            <div class="success-banner" id="success-banner">
-              <i class="fa-solid fa-circle-check"></i>
-              <h2 class="script">Thank you for your order!</h2> 
-              <p>
-                  I will get back to you regarding further details.
-                  <br/>Keep an eye on your inbox!
-              </p>
+          <div class="col">
+            <div class="price-token">
+              <img src="img/com-fullbody.jpg" alt="Fullbody sample" />
+              <h3 class="script">$80</h3>
             </div>
+            <h3>Fullbody</h3>
+            <p>A fully rendered illustration of any full body character</p>
+          </div>
+        </div>
+        <div class="row fade-in">
+          <div class="wide-col">
+            <h2><i class="fa-brands fa-pagelines"></i> Extras</h2>
+            <p>
+              I also offer the following additions to all orders:
+              <br />- Additional characters <br />- Digital character sheet
+              (view example) <br />- Painted backgrounds <br />- Familiars and
+              mounts
+            </p>
+            <button class="button-hollow" onclick="show()">
+              <i class="fa fa-paper-plane"></i> Start My Order
+            </button>
+          </div>
+        </div>
+        <div class="modal" id="modal">
+          <form id="submitOrderForm" method="POST" data-netlify="true" netlify>
+            <div class="form-field">
+              <label for="email">Your Email*</label>
+              <input
+                type="email"
+                name="senderEmail"
+                required
+                placeholder="ie. artplease@gmail.com"
+              />
+            </div>
+            <div class="form-field">
+              <label for="package">Art Package</label>
+              <select name="package" id="package">
+                <option value="bust">Token</option>
+                <option value="cinematic">Cinematic</option>
+                <option value="fullBody">Full Body</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="characterTotal">Number of Characters*</label>
+              <input
+                type="number"
+                min="1"
+                max="6"
+                name="characterTotal"
+                placeholder="0"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="extras">Extras?</label>
+              <fieldset name="extras">
+                <input type="checkbox" name="smallFamiliar" value="yes" />Small
+                Familiar - $10<br />
+                <input type="checkbox" name="largeFamiliar" value="yes" />Large
+                Familiar or Mount - $20<br />
+                <input type="checkbox" name="background" value="yes" />Custom
+                Background - $5<br />
+                <input
+                  type="checkbox"
+                  name="digitalCharacterSheet"
+                  value="yes"
+                />Digital Character Sheet - $3<br />
+              </fieldset>
+            </div>
+            <div class="form-field">
+              <label for="characterDetails">Details</label>
+              <textarea
+                name="characterDetails"
+                form="submitOrderForm"
+                placeholder="Any details about your characters: descriptions (race, hair, skin tones, armor, etc.), desired pose, etc."
+              ></textarea>
+            </div>
+            <div class="form-field">
+              <label class="file-upload" for="characterFiles">
+                Select Reference Image
+                <br /><i class="fa-solid fa-camera-retro"></i>
+                <input
+                  type="file"
+                  id="characterFiles"
+                  name="characterFiles"
+                  accept=".jpg, .jpeg, .png, .pdf, .docx"
+                />
+              </label>
+            </div>
+            <button type="submit">
+              <i class="fa fa-paper-plane" type="submit"></i> Submit Order
+            </button>
+            <p class="dark-text" onclick="hide()">Cancel</p>
+          </form>
+          <div class="success-banner" id="success-banner">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2 class="script">Thank you for your order!</h2>
+            <p>
+              I will get back to you regarding further details.
+              <br />Keep an eye on your inbox!
+            </p>
+          </div>
         </div>
       </div>
       <!-- Gallery -->
-      <div class="row text-banner" style="margin-bottom: 0; background-color: var(--sage);" id="gallery">
-        <img
-          class="header-banner"
-          src="img/banner-gallery.png"
-          alt="Gallery"
-        />
+      <div
+        class="row text-banner"
+        style="margin-bottom: 0; background-color: var(--sage)"
+        id="gallery"
+      >
+        <img class="header-banner" src="img/banner-gallery.png" alt="Gallery" />
         <p>
           character design
           <span style="color: var(--yellow)">&#9900;</span> illustration
           <span style="color: var(--yellow)">&#9900;</span>
           graphic design
         </p>
-      <div class="container">
-        <div class="row">
-          <a class="tile" href="">
-            <img src="img/art5.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art2.jpg" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art4.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art20.png" alt="design tile" />
-          </a>
-        </div>
-        <div class="row">
-          <a class="tile" href="">
-            <img src="img/art21.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art19.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art1.jpg" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art3.jpg" alt="design tile" />
-          </a>
-        </div>
-        <div class="row">
-          <a class="tile" href="">
-            <img src="img/art14.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art8.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art12.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art22.jpg" alt="design tile" />
-          </a>
-        </div>
-        <div class="row">
-          <a class="tile" href="">
-            <img src="img/art6.jpg" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art9.jpg" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art18.png" alt="design tile" />
-          </a>
-          <a class="tile" href="">
-            <img src="img/art17.png" alt="design tile" />
-          </a>
+        <div class="container">
+          <div class="row">
+            <a class="tile" href="">
+              <img src="img/art5.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art2.jpg" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art4.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art20.png" alt="design tile" />
+            </a>
+          </div>
+          <div class="row">
+            <a class="tile" href="">
+              <img src="img/art21.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art19.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art1.jpg" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art3.jpg" alt="design tile" />
+            </a>
+          </div>
+          <div class="row">
+            <a class="tile" href="">
+              <img src="img/art14.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art8.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art12.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art22.jpg" alt="design tile" />
+            </a>
+          </div>
+          <div class="row">
+            <a class="tile" href="">
+              <img src="img/art6.jpg" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art9.jpg" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art18.png" alt="design tile" />
+            </a>
+            <a class="tile" href="">
+              <img src="img/art17.png" alt="design tile" />
+            </a>
+          </div>
         </div>
       </div>
     </main>
@@ -298,10 +324,11 @@
       <p>All content &#169; Leah Nonay "Pancakes"</p>
     </footer>
   </body>
+
   <script>
     // Smooth scroll
     document.querySelectorAll('.internal, a[href^="#"]').forEach((a) => {
-      if(a.nodeName === "DIV") {
+      if (a.nodeName === "DIV") {
         a.onclick = function (e) {
           var href = this.getAttribute("onclick");
           var getId = href.substring(15, href.length - 1);
@@ -317,15 +344,19 @@
           });
         };
       }
-      if(a.nodeName === "A") {
-        a.addEventListener('click', function (e) {
+      if (a.nodeName === "A") {
+        a.addEventListener("click", function (e) {
           e.preventDefault();
           var href = this.getAttribute("href");
-          var element = document.querySelector(href)||document.querySelector("a[name="+href.substring(1, href.length)+"]");
+          var element =
+            document.querySelector(href) ||
+            document.querySelector(
+              "a[name=" + href.substring(1, href.length) + "]"
+            );
           window.scroll({
-              top: element.offsetTop - 30, 
-                left: 0, 
-              behavior: 'smooth' 
+            top: element.offsetTop - 30,
+            left: 0,
+            behavior: "smooth",
           });
         });
       }
@@ -333,20 +364,20 @@
     // Modal toggle
     function show() {
       var modal = document.getElementById("modal");
-      modal.classList.add('open');
+      modal.classList.add("open");
     }
     function hide() {
       var modal = document.getElementById("modal");
-      modal.classList.remove('open');
+      modal.classList.remove("open");
     }
     // Success
     function orderSubmitted() {
       var modal = document.getElementById("modal");
-      modal.classList.add('thanks');
+      modal.classList.add("thanks");
       setTimeout(() => {
-        const banner = document.getElementById('success-banner');
-        banner.style.display = 'none';
-        modal.classList.remove('open');
+        const banner = document.getElementById("success-banner");
+        banner.style.display = "none";
+        modal.classList.remove("open");
       }, 5500);
     }
   </script>
