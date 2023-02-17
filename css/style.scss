@@ -1,20 +1,17 @@
 :root {
   // Colours
-  --black: #212121;
+
+  --yellow: #f9ebc7;
+
+  --linen: #fcf2da;
+  --linen-dark: #e7e0c8;
   --charcoal: #463b32;
-  --gray: #a9a9a9;
-  --light-gray: #f0f0f0;
-  --medium-gray: #636363;
-  --off-white: #fcf2da;
-  --white: #f8f6f1;
+  --sand: #b99470;
   --mustard: #f8b253;
+  --rust: #c4661f;
   --olive: #5f6f52;
   --olive-nav: #56644a;
   --sage: #a9b388;
-  --sand: #b99470;
-  --terracotta: #783d19;
-  --orange: #c4661f;
-  --yellow: #f9ebc7;
 
   // Spacing
   --pad-xxs: 0.5rem;
@@ -27,7 +24,7 @@
   --ease-in: 0.5s ease-in;
 }
 body {
-  background-color: var(--white);
+  background-color: var(--linen);
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 62.5%;
   letter-spacing: 0.05rem;
@@ -36,41 +33,62 @@ body {
   text-align: center;
 }
 // Typography
-.dark-text {
+.text-shared {
   color: var(--charcoal);
+  font-weight: bolder !important;
   font-weight: lighter;
   text-align: center;
-  font-weight: bolder !important;
+}
+.text-darken {
+  font-weight: bolder;
 }
 h1 {
   font-size: 4rem;
-  @extend .dark-text;
+  font-family: "Berkshire Swash", cursive;
+  line-height: 4rem;
+  @extend .text-shared;
 }
 h2 {
   font-size: 2rem;
-  @extend .dark-text;
+  font-family: "Berkshire Swash", cursive;
+  color: var(--mustard);
+  @extend .text-shared;
 }
 h3 {
   font-size: 1.7rem;
-  @extend .dark-text;
+  @extend .text-shared;
 }
 p {
-  color: var(--light-gray);
+  color: var(--linen);
   font-size: 1.1rem;
   line-height: 1.5rem;
-  .dark-text {
-    font-weight: 500;
-  }
 }
 a {
-  color: var(--light-gray);
+  color: var(--linen);
+  vertical-align: middle;
   text-decoration: none;
+  &:hover {
+    color: var(--linen);
+    transition: var(--ease-in);
+  }
+  &:not(:hover) {
+    transition: var(--ease-in);
+  }
 }
-.script {
-  font-family: "La Belle Aurore", "Satisfy", cursive;
-  color: var(--yellow);
-  z-index: 1;
-  position: relative;
+.link-dark {
+  color: var(--charcoal);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  text-decoration: underline;
+  &:hover {
+    cursor: pointer;
+    color: var(--olive);
+    transition: var(--ease-in);
+  }
+  &:not(:hover) {
+    transition: var(--ease-in);
+  }
 }
 // Header
 header {
@@ -98,7 +116,7 @@ header {
         transition: var(--ease-in);
       }
       a:hover {
-        color: var(--yellow);
+        color: var(--mustard);
         transition: var(--ease-in);
         &:not(:hover) {
           transition: var(--ease-in);
@@ -178,11 +196,11 @@ header {
       overflow: hidden;
       position: relative;
       h3 {
-        color: var(--yellow);
+        color: var(--linen);
         display: none;
       }
       &:hover {
-        background: var(--terracotta);
+        background: var(--rust);
         transition: 0.2s ease-in;
         z-index: 1;
         h3 {
@@ -219,10 +237,7 @@ header {
     background-color: var(--olive);
     flex-direction: column;
     margin-bottom: var(--pad-xs);
-    width: 64rem;
-    h2 {
-      color: var(--yellow);
-    }
+    max-width: 64rem;
   }
 }
 .block-left {
@@ -231,13 +246,14 @@ header {
   width: 40%;
   h1 {
     font-size: 1.7rem;
-    color: var(--yellow);
+    color: var(--mustard);
     margin-top: var(--pad-md);
     padding: var(--pad-xs) 0;
   }
   img {
     border-radius: 100%;
-    max-width: 70%;
+    width: 70%;
+    max-width: 25rem;
     margin: var(--pad-sm) auto;
     padding: var(--pad-xs);
   }
@@ -250,7 +266,7 @@ header {
 .block-right {
   width: 60%;
   padding: var(--pad-xs) 0;
-  background-color: var(--white);
+  background-color: var(--linen);
   position: relative;
   p {
     padding: var(--pad-xs);
@@ -288,9 +304,8 @@ header {
       display: block;
     }
     h1 {
-      font-family: "Berkshire Swash", cursive;
+      color: var(--linen);
       line-height: 3.5rem;
-      color: var(--off-white);
     }
     img {
       max-width: 75%;
@@ -301,8 +316,22 @@ header {
     }
   }
 }
-//Wave generated with https://www.shapedivider.app/
-.block-left .custom-shape {
+// generated with https://www.shapedivider.app/
+.full-wave-shape {
+  transform: scaleY(-1);
+  position: relative;
+  z-index: 1;
+  svg {
+    height: 2rem;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    path {
+      fill: var(--sage);
+    }
+  }
+}
+.block-left .wave-shape {
   margin-top: -1rem;
   transform: scaleY(-1);
   svg {
@@ -316,7 +345,7 @@ header {
     }
   }
 }
-.block-right .custom-shape {
+.block-right .wave-shape {
   position: absolute;
   margin-top: -2.4rem;
   width: 100%;
@@ -328,20 +357,20 @@ header {
     height: 2rem;
     transform: rotateY(-180deg);
     path {
-      fill: var(--white);
+      fill: var(--linen);
     }
   }
 }
 .text-banner {
   @extend .full-container;
   flex-direction: column;
-  background-color: var(--off-white);
+  background-color: var(--linen-dark);
   padding: var(--pad-sm);
   p {
-    color: var(--white);
+    color: var(--linen);
     font-weight: 500;
     max-width: 80rem;
-    margin: 0 auto var(--pad-xs) auto;
+    margin: var(--pad-xs) auto;
   }
   button {
     max-width: 20rem;
@@ -351,40 +380,6 @@ header {
 .header-banner {
   max-width: 15rem;
   margin: 0 auto;
-}
-
-.clickable {
-  cursor: pointer;
-  background-color: var(--sand) !important;
-  border: 2px solid var(--sand);
-  display: none !important;
-  img {
-    border-radius: 100%;
-  }
-  p {
-    color: var(--white) !important;
-  }
-  &:first-child {
-    background-color: var(--terracotta) !important;
-    border: 2px solid var(--terracotta);
-  }
-  &:last-child {
-    background-color: var(--orange) !important;
-    border: 2px solid var(--orange);
-  }
-  &:hover {
-    border: 2px solid var(--yellow);
-    transition: var(--ease-in);
-    button {
-      transition: var(--ease-in);
-      background-color: var(--sand);
-      border: 2px solid var(--yellow);
-      color: var(--yellow);
-    }
-  }
-  &:not(:hover) {
-    transition: var(--ease-in);
-  }
 }
 .tile {
   margin: var(--pad-xxs) var(--pad-xxs);
@@ -398,17 +393,30 @@ header {
   }
 }
 button {
-  background-color: var(--yellow);
-  border: 2px solid var(--yellow);
-  color: var(--terracotta);
+  background-color: var(--rust);
+  border: 2px solid var(--linen);
+  color: var(--linen);
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5rem;
+  margin: var(--pad-xxs) auto;
   padding: var(--pad-xxs) var(--pad-xs);
   width: 100%;
   &:hover {
-    background-color: var(--terracotta);
-    border: 2px solid var(--yellow);
+    background-color: var(--linen);
+    color: var(--rust);
+    cursor: pointer;
+    transition: var(--ease-in);
+  }
+  &:not(:hover) {
+    transition: var(--ease-in);
+  }
+}
+.btn-secondary {
+  background-color: var(--sage);
+  &:hover {
+    background-color: var(--rust);
+    border: 2px solid var(--linen);
     color: var(--yellow);
     cursor: pointer;
     transition: var(--ease-in);
@@ -417,22 +425,17 @@ button {
     transition: var(--ease-in);
   }
 }
-.button-hollow {
-  border: 2px solid var(--yellow);
-  background-color: var(--sage);
-  color: var(--white);
-}
 input[type="radio"] {
   display: none;
 }
 .input-shared {
-  background-color: var(--white);
+  background-color: var(--linen);
   border: none;
   color: var(--olive);
   height: 40px;
+  outline: none;
   padding: var(--pad-xxs) var(--pad-xs);
   width: 100%;
-  outline: none;
 }
 .modal {
   height: 100vh;
@@ -454,21 +457,9 @@ input[type="radio"] {
     max-width: 50rem;
     overflow: hidden;
     padding: var(--pad-xs) var(--pad-sm);
-    button {
-      background-color: var(--orange);
-      color: var(--yellow);
-      margin: var(--pad-xxs) auto;
-      &:hover {
-        background-color: var(--yellow);
-        color: var(--orange);
-      }
-      &:not(:hover) {
-        transition: var(--ease-in);
-      }
-    }
     p {
       font-weight: normal !important;
-      color: var(--white);
+      color: var(--linen);
       margin-top: var(--pad-xxs);
       &:hover {
         cursor: pointer;
@@ -489,10 +480,10 @@ input[type="radio"] {
         text-align: left;
       }
       .file-upload {
-        text-align: center;
-        border: 2px solid var(--off-white);
-        color: var(--white);
+        border: 2px solid var(--linen);
+        color: var(--linen);
         padding: var(--pad-xxs);
+        text-align: center;
         &:hover {
           cursor: pointer;
           opacity: 0.75;
@@ -525,7 +516,7 @@ input[type="radio"] {
       fieldset {
         background-color: var(--olive);
         border: none;
-        color: var(--white);
+        color: var(--linen);
         margin-bottom: var(--pad-xs);
         text-align: left;
       }
@@ -549,7 +540,7 @@ input[type="radio"] {
       padding: var(--pad-sm) var(--pad-sm);
       i {
         font-size: 6rem;
-        color: var(--white);
+        color: var(--linen);
       }
       h2 {
         margin: var(--pad-sm) auto var(--pad-xs) auto;
@@ -563,7 +554,7 @@ input[type="radio"] {
   left: 0;
   bottom: 0;
   right: 0;
-  background: var(--off-white);
+  background: var(--linen);
   // backdrop-filter: blur(17rem) opacity;
   // transition: backdrop-filter 0.5s opacity;
   opacity: 0.95;
@@ -586,13 +577,31 @@ footer {
 }
 // Responsive Styling, Tablet
 @media only screen and (min-width: 750px) {
+  // HTML Components
+  form {
+    width: 80%;
+    .form-field {
+      &:nth-child(2),
+      &:nth-child(3) {
+        float: left;
+        margin-top: 0 !important;
+        width: 48.5%;
+        input {
+          padding-right: var(--pad-xxs);
+        }
+      }
+      &:nth-child(2) {
+        margin-right: var(--pad-xs);
+      }
+    }
+  }
+  // Custom Components
   // Header changes from hamburger view to a horizontal list view
   .nav {
     padding: var(--pad-xs) 0 var(--pad-xs) 0;
     position: fixed;
     width: 100vw;
     z-index: 2;
-    // border-bottom: 2px solid var(--sage);
     label {
       display: none;
     }
@@ -608,15 +617,12 @@ footer {
         padding-right: var(--pad-xs);
         margin-right: var(--pad-xs);
         width: auto;
-        &:first-child {
-          padding: 0;
-          margin-right: var(--pad-sm);
-        }
         &:nth-child(2),
         &:nth-child(3) {
           border-right: 2px solid var(--sage);
         }
         a {
+          color: var(--linen);
           vertical-align: middle;
         }
       }
@@ -626,10 +632,6 @@ footer {
     width: 30%;
     margin: var(--pad-sm) var(--pad-xxs) !important;
     padding: var(--pad-xs) !important;
-  }
-  .clickable {
-    display: block !important;
-    max-width: 20rem !important;
   }
   .banner {
     height: 35rem;
@@ -650,26 +652,31 @@ footer {
     padding: var(--pad-md) 0;
     width: 35%;
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       padding: 0 var(--pad-sm);
       margin-top: 4rem;
     }
     p,
     img {
       padding: 0 var(--pad-xs);
+      color: var(--linen);
     }
-    .custom-shape {
+    .wave-shape {
       margin-top: -5rem;
     }
   }
   .block-right {
     width: 65%;
-    .custom-shape {
+    .wave-shape {
       margin-top: -2.9rem;
       svg {
         width: 175vw;
         height: 2.2rem;
       }
+    }
+    h1 {
+      padding: var(--pad-sm);
+      text-align: left;
     }
     p {
       padding: 0 var(--pad-sm);
@@ -678,46 +685,12 @@ footer {
       }
     }
   }
-  .info-card {
-    max-width: 35rem;
-    span:first-child {
-      margin: 0 auto;
-    }
-  }
   .tile {
-    width: 32%;
+    width: 15rem;
+    height: 15rem;
   }
-  .portfolio .project-details .info label {
-    p {
-      opacity: 1 !important;
-    }
-    &:hover {
-      cursor: pointer;
-      p {
-        opacity: 0.5;
-        transition: var(--ease-in);
-      }
-    }
-    &:not(:hover) {
-      transition: var(--ease-in);
-    }
-  }
-  form {
-    width: 80%;
-    .form-field {
-      &:nth-child(2),
-      &:nth-child(3) {
-        float: left;
-        margin-top: 0 !important;
-        width: 48.5%;
-        input {
-          padding-right: var(--pad-xxs);
-        }
-      }
-      &:nth-child(2) {
-        margin-right: var(--pad-xs);
-      }
-    }
+  .wide-col {
+    width: 64rem;
   }
 }
 // Responsive Styling, Desktop
@@ -725,34 +698,13 @@ footer {
   .banner {
     height: 40rem;
   }
-  .info-card {
-    max-width: 70rem;
-    span:first-child {
-      max-width: 30%;
-    }
-    span:last-child {
-      width: 68%;
-      h3,
-      p {
-        padding: 0 var(--pad-sm);
-        text-align: left;
-      }
-    }
-  }
   .col {
     max-width: 20rem;
   }
-  .hobby p {
-    margin-left: var(--pad-md);
-  }
-  .primary {
-    max-width: 23rem;
-  }
-  .project-details {
-    padding: var(--pad-xs) var(--pad-md);
-  }
-  .tile {
-    width: 15rem;
+  .block-right {
+    h1 {
+      padding-top: var(--pad-xl);
+    }
   }
   form {
     width: 100%;

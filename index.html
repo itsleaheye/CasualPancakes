@@ -66,7 +66,7 @@
       <!-- About Section -->
       <div class="full-container fade-in" id="about">
         <div class="block-left">
-          <div class="custom-shape">
+          <div class="wave-shape">
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
             </svg>
           </div>
           <div class="fade-in">
-            <h1 class="script">Hello!</h1>
+            <h1>hello!</h1>
             <img
               class="fade-in"
               src="img/thumbnail-avatar.jpg"
@@ -90,7 +90,7 @@
           </div>
         </div>
         <div class="block-right">
-          <div class="custom-shape">
+          <div class="wave-shape">
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,8 @@
             </svg>
           </div>
           <div class="fade-in">
-            <p class="dark-text bolder">
+            <h1>About Me</h1>
+            <p class="text-darken bolder">
               I am a digital artist, designer, and software engineer from
               Alberta, Canada.
             </p>
@@ -120,50 +121,62 @@
       </div>
       <!-- Order Section -->
       <div class="row text-banner" id="order">
-        <img class="header-banner" src="img/banner-order.png" alt="Ordering" />
+        <h1>The Shop</h1>
+        <a
+          class="link-dark"
+          onclick="window.location='https://www.fiverr.com/casualpancakes'"
+          >View Reviews</a
+        >
         <div class="row fade-in">
           <div class="col">
             <div class="price-token">
               <img src="img/com-headshot.jpg" alt="Headshot sample" />
-              <h3 class="script">$40</h3>
+              <h3 class="script">$40 CAD</h3>
             </div>
             <h3>Head Shot</h3>
             <p>
               A fully rendered illustration of the chest and up of any character
             </p>
+            <button onclick="show()">
+              <i class="fa fa-paper-plane"></i> Start My Order
+            </button>
           </div>
           <div class="col">
             <div class="price-token">
               <img src="img/com-still.jpg" alt="Still sample" />
-              <h3 class="script">$60</h3>
+              <h3 class="script">$60 CAD</h3>
             </div>
-            <h3>Scene Still</h3>
+            <h3>Scenic Still</h3>
             <p>
               A fully rendered illustration of the waist up, of any character,
               background, and quote
             </p>
+            <button onclick="show()">
+              <i class="fa fa-paper-plane"></i> Start My Order
+            </button>
           </div>
           <div class="col">
             <div class="price-token">
               <img src="img/com-fullbody.jpg" alt="Fullbody sample" />
-              <h3 class="script">$80</h3>
+              <h3 class="script">$80 CAD</h3>
             </div>
             <h3>Fullbody</h3>
             <p>A fully rendered illustration of any full body character</p>
+            <button onclick="show()">
+              <i class="fa fa-paper-plane"></i> Start My Order
+            </button>
           </div>
         </div>
         <div class="row fade-in">
           <div class="wide-col">
-            <h2><i class="fa-brands fa-pagelines"></i> Extras</h2>
+            <h2>Extras</h2>
+            <!--<i class="fa-brands fa-pagelines"></i> -->
             <p>
-              I also offer the following additions to all orders:
+              The following additions can be applied to any order:
               <br />- Additional characters <br />- Digital character sheet
-              (view example) <br />- Painted backgrounds <br />- Familiars and
-              mounts
+              <a href="img/charactersheet.jpg">(view example)</a> <br />-
+              Painted backgrounds <br />- Familiars and mounts
             </p>
-            <button class="button-hollow" onclick="show()">
-              <i class="fa fa-paper-plane"></i> Start My Order
-            </button>
           </div>
         </div>
         <div class="modal" id="modal">
@@ -235,7 +248,7 @@
             <button type="submit">
               <i class="fa fa-paper-plane" type="submit"></i> Submit Order
             </button>
-            <p class="dark-text" onclick="hide()">Cancel</p>
+            <p class="text-darken" onclick="hide()">Cancel</p>
           </form>
           <div class="success-banner" id="success-banner">
             <i class="fa-solid fa-circle-check"></i>
@@ -248,16 +261,29 @@
         </div>
       </div>
       <!-- Gallery -->
+      <div class="full-wave-shape">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <div
         class="row text-banner"
         style="margin-bottom: 0; background-color: var(--sage)"
         id="gallery"
       >
-        <img class="header-banner" src="img/banner-gallery.png" alt="Gallery" />
+        <h1>Gallery</h1>
         <p>
           character design
-          <span style="color: var(--yellow)">&#9900;</span> illustration
-          <span style="color: var(--yellow)">&#9900;</span>
+          <span style="color: var(--mustard)">&#9900;</span> illustration
+          <span style="color: var(--mustard)">&#9900;</span>
           graphic design
         </p>
         <div class="container">
@@ -328,22 +354,6 @@
   <script>
     // Smooth scroll
     document.querySelectorAll('.internal, a[href^="#"]').forEach((a) => {
-      if (a.nodeName === "DIV") {
-        a.onclick = function (e) {
-          var href = this.getAttribute("onclick");
-          var getId = href.substring(15, href.length - 1);
-          var element =
-            document.querySelector(getId) ||
-            document.querySelector(
-              "a[name=" + getId.substring(1, getId.length) + "]"
-            );
-          window.scroll({
-            top: element.offsetTop - 30,
-            left: 0,
-            behavior: "smooth",
-          });
-        };
-      }
       if (a.nodeName === "A") {
         a.addEventListener("click", function (e) {
           e.preventDefault();
@@ -354,7 +364,7 @@
               "a[name=" + href.substring(1, href.length) + "]"
             );
           window.scroll({
-            top: element.offsetTop - 30,
+            top: element.offsetTop - 50,
             left: 0,
             behavior: "smooth",
           });

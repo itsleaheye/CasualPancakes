@@ -1,19 +1,14 @@
 :root {
-  --black: #212121;
+  --yellow: #f9ebc7;
+  --linen: #fcf2da;
+  --linen-dark: #e7e0c8;
   --charcoal: #463b32;
-  --gray: #a9a9a9;
-  --light-gray: #f0f0f0;
-  --medium-gray: #636363;
-  --off-white: #fcf2da;
-  --white: #f8f6f1;
+  --sand: #b99470;
   --mustard: #f8b253;
+  --rust: #c4661f;
   --olive: #5f6f52;
   --olive-nav: #56644a;
   --sage: #a9b388;
-  --sand: #b99470;
-  --terracotta: #783d19;
-  --orange: #c4661f;
-  --yellow: #f9ebc7;
   --pad-xxs: 0.5rem;
   --pad-xs: 1rem;
   --pad-sm: 2rem;
@@ -23,7 +18,7 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--linen);
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 62.5%;
   letter-spacing: 0.05rem;
@@ -32,19 +27,27 @@ body {
   text-align: center;
 }
 
-.dark-text, h3, h2, h1 {
+.text-shared, h3, h2, h1 {
   color: var(--charcoal);
+  font-weight: bolder !important;
   font-weight: lighter;
   text-align: center;
-  font-weight: bolder !important;
+}
+
+.text-darken {
+  font-weight: bolder;
 }
 
 h1 {
   font-size: 4rem;
+  font-family: "Berkshire Swash", cursive;
+  line-height: 4rem;
 }
 
 h2 {
   font-size: 2rem;
+  font-family: "Berkshire Swash", cursive;
+  color: var(--mustard);
 }
 
 h3 {
@@ -52,24 +55,38 @@ h3 {
 }
 
 p {
-  color: var(--light-gray);
+  color: var(--linen);
   font-size: 1.1rem;
   line-height: 1.5rem;
 }
-p .dark-text, p h1, p h2, p h3 {
-  font-weight: 500;
-}
 
 a {
-  color: var(--light-gray);
+  color: var(--linen);
+  vertical-align: middle;
   text-decoration: none;
 }
+a:hover {
+  color: var(--linen);
+  transition: var(--ease-in);
+}
+a:not(:hover) {
+  transition: var(--ease-in);
+}
 
-.script {
-  font-family: "La Belle Aurore", "Satisfy", cursive;
-  color: var(--yellow);
-  z-index: 1;
-  position: relative;
+.link-dark {
+  color: var(--charcoal);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  text-decoration: underline;
+}
+.link-dark:hover {
+  cursor: pointer;
+  color: var(--olive);
+  transition: var(--ease-in);
+}
+.link-dark:not(:hover) {
+  transition: var(--ease-in);
 }
 
 header {
@@ -101,7 +118,7 @@ header {
   transition: var(--ease-in);
 }
 .nav ul li a:hover {
-  color: var(--yellow);
+  color: var(--mustard);
   transition: var(--ease-in);
 }
 .nav ul li a:hover:not(:hover) {
@@ -175,11 +192,11 @@ header {
   position: relative;
 }
 .row .col .price-token h3 {
-  color: var(--yellow);
+  color: var(--linen);
   display: none;
 }
 .row .col .price-token:hover {
-  background: var(--terracotta);
+  background: var(--rust);
   transition: 0.2s ease-in;
   z-index: 1;
 }
@@ -212,10 +229,7 @@ header {
   background-color: var(--olive);
   flex-direction: column;
   margin-bottom: var(--pad-xs);
-  width: 64rem;
-}
-.row .wide-col h2 {
-  color: var(--yellow);
+  max-width: 64rem;
 }
 
 .block-left {
@@ -225,13 +239,14 @@ header {
 }
 .block-left h1 {
   font-size: 1.7rem;
-  color: var(--yellow);
+  color: var(--mustard);
   margin-top: var(--pad-md);
   padding: var(--pad-xs) 0;
 }
 .block-left img {
   border-radius: 100%;
-  max-width: 70%;
+  width: 70%;
+  max-width: 25rem;
   margin: var(--pad-sm) auto;
   padding: var(--pad-xs);
 }
@@ -244,7 +259,7 @@ header {
 .block-right {
   width: 60%;
   padding: var(--pad-xs) 0;
-  background-color: var(--white);
+  background-color: var(--linen);
   position: relative;
 }
 .block-right p {
@@ -285,9 +300,8 @@ header {
   display: block;
 }
 .banner .banner-content h1 {
-  font-family: "Berkshire Swash", cursive;
+  color: var(--linen);
   line-height: 3.5rem;
-  color: var(--off-white);
 }
 .banner .banner-content img {
   max-width: 75%;
@@ -297,48 +311,63 @@ header {
   font-size: 1rem;
 }
 
-.block-left .custom-shape {
+.full-wave-shape {
+  transform: scaleY(-1);
+  position: relative;
+  z-index: 1;
+}
+.full-wave-shape svg {
+  height: 2rem;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+.full-wave-shape svg path {
+  fill: var(--sage);
+}
+
+.block-left .wave-shape {
   margin-top: -1rem;
   transform: scaleY(-1);
 }
-.block-left .custom-shape svg {
+.block-left .wave-shape svg {
   height: 2rem;
   left: 0;
   width: 51vw;
   position: absolute;
   transform: rotateY(180deg);
 }
-.block-left .custom-shape svg path {
+.block-left .wave-shape svg path {
   fill: var(--olive);
 }
 
-.block-right .custom-shape {
+.block-right .wave-shape {
   position: absolute;
   margin-top: -2.4rem;
   width: 100%;
   overflow-x: hidden;
 }
-.block-right .custom-shape svg {
+.block-right .wave-shape svg {
   left: -70%;
   position: relative;
   width: 110vw;
   height: 2rem;
   transform: rotateY(-180deg);
 }
-.block-right .custom-shape svg path {
-  fill: var(--white);
+.block-right .wave-shape svg path {
+  fill: var(--linen);
 }
 
 .text-banner {
   flex-direction: column;
-  background-color: var(--off-white);
+  background-color: var(--linen-dark);
   padding: var(--pad-sm);
 }
 .text-banner p {
-  color: var(--white);
+  color: var(--linen);
   font-weight: 500;
   max-width: 80rem;
-  margin: 0 auto var(--pad-xs) auto;
+  margin: var(--pad-xs) auto;
 }
 .text-banner button {
   max-width: 20rem;
@@ -348,40 +377,6 @@ header {
 .header-banner {
   max-width: 15rem;
   margin: 0 auto;
-}
-
-.clickable {
-  cursor: pointer;
-  background-color: var(--sand) !important;
-  border: 2px solid var(--sand);
-  display: none !important;
-}
-.clickable img {
-  border-radius: 100%;
-}
-.clickable p {
-  color: var(--white) !important;
-}
-.clickable:first-child {
-  background-color: var(--terracotta) !important;
-  border: 2px solid var(--terracotta);
-}
-.clickable:last-child {
-  background-color: var(--orange) !important;
-  border: 2px solid var(--orange);
-}
-.clickable:hover {
-  border: 2px solid var(--yellow);
-  transition: var(--ease-in);
-}
-.clickable:hover button {
-  transition: var(--ease-in);
-  background-color: var(--sand);
-  border: 2px solid var(--yellow);
-  color: var(--yellow);
-}
-.clickable:not(:hover) {
-  transition: var(--ease-in);
 }
 
 .tile {
@@ -397,19 +392,19 @@ header {
 }
 
 button {
-  background-color: var(--yellow);
-  border: 2px solid var(--yellow);
-  color: var(--terracotta);
+  background-color: var(--rust);
+  border: 2px solid var(--linen);
+  color: var(--linen);
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5rem;
+  margin: var(--pad-xxs) auto;
   padding: var(--pad-xxs) var(--pad-xs);
   width: 100%;
 }
 button:hover {
-  background-color: var(--terracotta);
-  border: 2px solid var(--yellow);
-  color: var(--yellow);
+  background-color: var(--linen);
+  color: var(--rust);
   cursor: pointer;
   transition: var(--ease-in);
 }
@@ -417,10 +412,18 @@ button:not(:hover) {
   transition: var(--ease-in);
 }
 
-.button-hollow {
-  border: 2px solid var(--yellow);
+.btn-secondary {
   background-color: var(--sage);
-  color: var(--white);
+}
+.btn-secondary:hover {
+  background-color: var(--rust);
+  border: 2px solid var(--linen);
+  color: var(--yellow);
+  cursor: pointer;
+  transition: var(--ease-in);
+}
+.btn-secondary:not(:hover) {
+  transition: var(--ease-in);
 }
 
 input[type=radio] {
@@ -430,13 +433,13 @@ input[type=radio] {
 .input-shared, .modal form .form-field input,
 .modal form .form-field select,
 .modal form .form-field textarea {
-  background-color: var(--white);
+  background-color: var(--linen);
   border: none;
   color: var(--olive);
   height: 40px;
+  outline: none;
   padding: var(--pad-xxs) var(--pad-xs);
   width: 100%;
-  outline: none;
 }
 
 .modal {
@@ -461,21 +464,9 @@ input[type=radio] {
   overflow: hidden;
   padding: var(--pad-xs) var(--pad-sm);
 }
-.modal form button {
-  background-color: var(--orange);
-  color: var(--yellow);
-  margin: var(--pad-xxs) auto;
-}
-.modal form button:hover {
-  background-color: var(--yellow);
-  color: var(--orange);
-}
-.modal form button:not(:hover) {
-  transition: var(--ease-in);
-}
 .modal form p {
   font-weight: normal !important;
-  color: var(--white);
+  color: var(--linen);
   margin-top: var(--pad-xxs);
 }
 .modal form p:hover {
@@ -497,10 +488,10 @@ input[type=radio] {
   text-align: left;
 }
 .modal form .form-field .file-upload {
-  text-align: center;
-  border: 2px solid var(--off-white);
-  color: var(--white);
+  border: 2px solid var(--linen);
+  color: var(--linen);
   padding: var(--pad-xxs);
+  text-align: center;
 }
 .modal form .form-field .file-upload:hover {
   cursor: pointer;
@@ -528,7 +519,7 @@ input[type=radio] {
 .modal form .form-field fieldset {
   background-color: var(--olive);
   border: none;
-  color: var(--white);
+  color: var(--linen);
   margin-bottom: var(--pad-xs);
   text-align: left;
 }
@@ -550,7 +541,7 @@ input[type=radio] {
 }
 .modal.thanks .success-banner i {
   font-size: 6rem;
-  color: var(--white);
+  color: var(--linen);
 }
 .modal.thanks .success-banner h2 {
   margin: var(--pad-sm) auto var(--pad-xs) auto;
@@ -562,7 +553,7 @@ input[type=radio] {
   left: 0;
   bottom: 0;
   right: 0;
-  background: var(--off-white);
+  background: var(--linen);
   opacity: 0.95;
   position: fixed;
   z-index: -2;
@@ -582,6 +573,20 @@ footer {
   }
 }
 @media only screen and (min-width: 750px) {
+  form {
+    width: 80%;
+  }
+  form .form-field:nth-child(2), form .form-field:nth-child(3) {
+    float: left;
+    margin-top: 0 !important;
+    width: 48.5%;
+  }
+  form .form-field:nth-child(2) input, form .form-field:nth-child(3) input {
+    padding-right: var(--pad-xxs);
+  }
+  form .form-field:nth-child(2) {
+    margin-right: var(--pad-xs);
+  }
   .nav {
     padding: var(--pad-xs) 0 var(--pad-xs) 0;
     position: fixed;
@@ -605,24 +610,17 @@ footer {
     margin-right: var(--pad-xs);
     width: auto;
   }
-  .nav ul li:first-child {
-    padding: 0;
-    margin-right: var(--pad-sm);
-  }
   .nav ul li:nth-child(2), .nav ul li:nth-child(3) {
     border-right: 2px solid var(--sage);
   }
   .nav ul li a {
+    color: var(--linen);
     vertical-align: middle;
   }
   .col {
     width: 30%;
     margin: var(--pad-sm) var(--pad-xxs) !important;
     padding: var(--pad-xs) !important;
-  }
-  .clickable {
-    display: block !important;
-    max-width: 20rem !important;
   }
   .banner {
     height: 35rem;
@@ -644,26 +642,31 @@ footer {
     width: 35%;
   }
   .block-left h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 0 var(--pad-sm);
     margin-top: 4rem;
   }
   .block-left p,
   .block-left img {
     padding: 0 var(--pad-xs);
+    color: var(--linen);
   }
-  .block-left .custom-shape {
+  .block-left .wave-shape {
     margin-top: -5rem;
   }
   .block-right {
     width: 65%;
   }
-  .block-right .custom-shape {
+  .block-right .wave-shape {
     margin-top: -2.9rem;
   }
-  .block-right .custom-shape svg {
+  .block-right .wave-shape svg {
     width: 175vw;
     height: 2.2rem;
+  }
+  .block-right h1 {
+    padding: var(--pad-sm);
+    text-align: left;
   }
   .block-right p {
     padding: 0 var(--pad-sm);
@@ -671,75 +674,23 @@ footer {
   .block-right p:first-child {
     padding-top: var(--pad-sm);
   }
-  .info-card {
-    max-width: 35rem;
-  }
-  .info-card span:first-child {
-    margin: 0 auto;
-  }
   .tile {
-    width: 32%;
+    width: 15rem;
+    height: 15rem;
   }
-  .portfolio .project-details .info label p {
-    opacity: 1 !important;
-  }
-  .portfolio .project-details .info label:hover {
-    cursor: pointer;
-  }
-  .portfolio .project-details .info label:hover p {
-    opacity: 0.5;
-    transition: var(--ease-in);
-  }
-  .portfolio .project-details .info label:not(:hover) {
-    transition: var(--ease-in);
-  }
-  form {
-    width: 80%;
-  }
-  form .form-field:nth-child(2), form .form-field:nth-child(3) {
-    float: left;
-    margin-top: 0 !important;
-    width: 48.5%;
-  }
-  form .form-field:nth-child(2) input, form .form-field:nth-child(3) input {
-    padding-right: var(--pad-xxs);
-  }
-  form .form-field:nth-child(2) {
-    margin-right: var(--pad-xs);
+  .wide-col {
+    width: 64rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .banner {
     height: 40rem;
   }
-  .info-card {
-    max-width: 70rem;
-  }
-  .info-card span:first-child {
-    max-width: 30%;
-  }
-  .info-card span:last-child {
-    width: 68%;
-  }
-  .info-card span:last-child h3,
-  .info-card span:last-child p {
-    padding: 0 var(--pad-sm);
-    text-align: left;
-  }
   .col {
     max-width: 20rem;
   }
-  .hobby p {
-    margin-left: var(--pad-md);
-  }
-  .primary {
-    max-width: 23rem;
-  }
-  .project-details {
-    padding: var(--pad-xs) var(--pad-md);
-  }
-  .tile {
-    width: 15rem;
+  .block-right h1 {
+    padding-top: var(--pad-xl);
   }
   form {
     width: 100%;
