@@ -131,8 +131,8 @@ header {
 .nav #nav-check {
   opacity: 0;
 }
-.nav label span {
-  border-top: 3px solid var(--white);
+.nav label div {
+  border-top: 3px solid var(--mustard);
   display: block;
   height: 0.75rem;
 }
@@ -265,7 +265,8 @@ header {
   background-size: cover;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 33vh;
+  height: 33vh;
+  min-height: 15rem;
   padding: var(--pad-xs) var(--pad-xs) var(--pad-xxs) var(--pad-xs);
   overflow-y: hidden;
 }
@@ -624,7 +625,11 @@ footer {
     max-width: 20rem !important;
   }
   .banner {
+    height: 35rem;
     padding: var(--pad-md) var(--pad-xs) var(--pad-md) var(--pad-xs);
+  }
+  .banner .banner-content {
+    margin-top: 6rem;
   }
   .banner .banner-content h1 {
     margin-top: 4rem;
@@ -705,7 +710,7 @@ footer {
 }
 @media only screen and (min-width: 1024px) {
   .banner {
-    height: 75vh;
+    height: 40rem;
   }
   .info-card {
     max-width: 70rem;
