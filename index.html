@@ -121,60 +121,66 @@
       </div>
       <!-- Order Section -->
       <div class="row text-banner" id="order">
-        <h1>The Shop</h1>
+        <h1>Ordering</h1>
         <a
           class="link-dark"
           onclick="window.location='https://www.fiverr.com/casualpancakes'"
           >View Reviews</a
         >
         <div class="row fade-in">
-          <div class="col">
-            <div class="price-token">
-              <img src="img/com-headshot.jpg" alt="Headshot sample" />
-              <h3 class="script">$40 CAD</h3>
-            </div>
-            <h3>Head Shot</h3>
-            <p>
-              A fully rendered illustration of the chest and up of any character
-            </p>
-            <button onclick="show()">
-              <i class="fa fa-paper-plane"></i> Start My Order
-            </button>
-          </div>
-          <div class="col">
-            <div class="price-token">
-              <img src="img/com-still.jpg" alt="Still sample" />
-              <h3 class="script">$60 CAD</h3>
-            </div>
-            <h3>Scenic Still</h3>
-            <p>
-              A fully rendered illustration of the waist up, of any character,
-              background, and quote
-            </p>
-            <button onclick="show()">
-              <i class="fa fa-paper-plane"></i> Start My Order
-            </button>
-          </div>
-          <div class="col">
-            <div class="price-token">
-              <img src="img/com-fullbody.jpg" alt="Fullbody sample" />
-              <h3 class="script">$80 CAD</h3>
-            </div>
-            <h3>Fullbody</h3>
-            <p>A fully rendered illustration of any full body character</p>
-            <button onclick="show()">
-              <i class="fa fa-paper-plane"></i> Start My Order
-            </button>
+          <input type="radio" name="slider" id="ordertype1" checked />
+          <input type="radio" name="slider" id="ordertype2" />
+          <input type="radio" name="slider" id="ordertype3" />
+          <div class="order-cards">
+            <label class="card" for="ordertype1" id="ordertype1">
+              <div class="price-token">
+                <img src="img/com-headshot.jpg" alt="Headshot sample" />
+                <h3 class="script">$40 CAD</h3>
+              </div>
+              <h3>Head Shot</h3>
+              <p>
+                A fully rendered illustration of the chest and up of any
+                character
+              </p>
+              <button onclick="show()">
+                <i class="fa fa-paper-plane"></i> Start My Order
+              </button>
+            </label>
+            <label class="card" for="ordertype2" id="ordertype2">
+              <div class="price-token">
+                <img src="img/com-still.jpg" alt="Still sample" />
+                <h3 class="script">$60 CAD</h3>
+              </div>
+              <h3>Scenic Still</h3>
+              <p>
+                A fully rendered illustration of the waist up, of any character,
+                background, and quote
+              </p>
+              <button onclick="show()">
+                <i class="fa fa-paper-plane"></i> Start My Order
+              </button>
+            </label>
+            <label class="card" for="ordertype3" id="ordertype3">
+              <div class="price-token">
+                <img src="img/com-fullbody.jpg" alt="Fullbody sample" />
+                <h3 class="script">$80 CAD</h3>
+              </div>
+              <h3>Fullbody</h3>
+              <p>A fully rendered illustration of any full body character</p>
+              <button onclick="show()">
+                <i class="fa fa-paper-plane"></i> Start My Order
+              </button>
+            </label>
           </div>
         </div>
         <div class="row fade-in">
           <div class="wide-col">
             <h2>Extras</h2>
             <!--<i class="fa-brands fa-pagelines"></i> -->
-            <p>
-              The following additions can be applied to any order:
-              <br />- Additional characters <br />- Digital character sheet
-              <a href="img/charactersheet.jpg">(view example)</a> <br />-
+            <p style="margin-top: 0.25rem">
+              I offer the following additions to all orders
+              <br /><br />- Additional characters <br />- Digital character
+              sheet <a href="img/charactersheet.jpg">(view example)</a> <br />-
               Painted backgrounds <br />- Familiars and mounts
             </p>
           </div>
@@ -277,71 +283,122 @@
       <div
         class="row text-banner"
         style="margin-bottom: 0; background-color: var(--sage)"
-        id="gallery"
       >
         <h1>Gallery</h1>
-        <p>
-          character design
-          <span style="color: var(--mustard)">&#9900;</span> illustration
+        <!-- <p>Click on the below options to view my work</p> -->
+        <p class="tooltip">
+          <span id="illustration" onclick="showGallery('illustration')"
+            >illustration&nbsp;</span
+          >
+          <span style="color: var(--mustard)">&#9900;</span
+          ><span
+            id="characterDesign"
+            class="active-gallery"
+            onclick="showGallery('characterDesign')"
+          >
+            &nbsp;character design&nbsp;</span
+          >
           <span style="color: var(--mustard)">&#9900;</span>
-          graphic design
+          <span id="graphicDesign" onclick="showGallery('graphicDesign')"
+            >&nbsp;graphic design</span
+          >
         </p>
-        <div class="container">
-          <div class="row">
-            <a class="tile" href="">
+        <div class="container row">
+          <div class="gallery active-gallery-view" id="galleryCD">
+            <div class="tile">
               <img src="img/art5.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art2.jpg" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art4.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art20.png" alt="design tile" />
-            </a>
-          </div>
-          <div class="row">
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art21.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art19.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art1.jpg" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art3.jpg" alt="design tile" />
-            </a>
-          </div>
-          <div class="row">
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art14.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
-              <img src="img/art8.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
+              <img src="img/art15.png" alt="design tile" />
+            </div>
+            <div class="tile">
               <img src="img/art12.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art22.jpg" alt="design tile" />
-            </a>
-          </div>
-          <div class="row">
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art6.jpg" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art9.jpg" alt="design tile" />
-            </a>
-            <a class="tile" href="">
+            </div>
+            <div class="tile">
               <img src="img/art18.png" alt="design tile" />
-            </a>
-            <a class="tile" href="">
-              <img src="img/art17.png" alt="design tile" />
-            </a>
+            </div>
+          </div>
+          <div class="gallery" id="galleryIllustration">
+            <div class="tile">
+              <img src="img/ill1.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill2.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill3.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill5.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill4.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill8.gif" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill6.jpg" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill7.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill9.png" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/ill10.png" alt="design tile" />
+            </div>
+          </div>
+          <div class="gallery" id="galleryGD">
+            <div class="tile">
+              <img src="img/gd2.jpg" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/gd6.jpg" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/gd1.jpg" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/gd5.jpg" alt="design tile" />
+            </div>
+            <div class="tile">
+              <img src="img/gd4.jpg" alt="design tile" />
+            </div>
           </div>
         </div>
       </div>
@@ -371,6 +428,67 @@
         });
       }
     });
+    //Gallery menu
+    function showGallery(galleryOption) {
+      var galleryOf;
+      var gallery;
+
+      switch (galleryOption) {
+        case "graphicDesign":
+          gallery = document.getElementById("galleryGD");
+          galleryOf = document.getElementById("graphicDesign");
+
+          document
+            .getElementById("characterDesign")
+            .classList.remove("active-gallery");
+          document
+            .getElementById("illustration")
+            .classList.remove("active-gallery");
+          document
+            .getElementById("galleryCD")
+            .classList.remove("active-gallery-view");
+          document
+            .getElementById("galleryIllustration")
+            .classList.remove("active-gallery-view");
+          break;
+        case "characterDesign":
+          gallery = document.getElementById("galleryCD");
+          galleryOf = document.getElementById("characterDesign");
+
+          document
+            .getElementById("graphicDesign")
+            .classList.remove("active-gallery");
+          document
+            .getElementById("illustration")
+            .classList.remove("active-gallery");
+          document
+            .getElementById("galleryGD")
+            .classList.remove("active-gallery-view");
+          document
+            .getElementById("galleryIllustration")
+            .classList.remove("active-gallery-view");
+          break;
+        default:
+          gallery = document.getElementById("galleryIllustration");
+          galleryOf = document.getElementById("illustration");
+
+          document
+            .getElementById("graphicDesign")
+            .classList.remove("active-gallery");
+          document
+            .getElementById("characterDesign")
+            .classList.remove("active-gallery");
+          document
+            .getElementById("galleryCD")
+            .classList.remove("active-gallery-view");
+          document
+            .getElementById("galleryGD")
+            .classList.remove("active-gallery-view");
+          break;
+      }
+      galleryOf.classList.add("active-gallery");
+      gallery.classList.add("active-gallery-view");
+    }
     // Modal toggle
     function show() {
       var modal = document.getElementById("modal");
