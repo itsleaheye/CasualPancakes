@@ -348,7 +348,7 @@ header {
   max-width: 15rem;
   margin: 0 auto;
 }
-.active-gallery {
+.active-header {
   color: var(--linen) !important;
   transition: var(--ease-in);
 }
@@ -356,10 +356,6 @@ header {
   display: none;
   width: 80%;
   margin: 0 auto;
-}
-.active-gallery-view {
-  display: block;
-  transition: all var(--ease-in);
 }
 .text-banner span {
   color: var(--charcoal);
@@ -392,7 +388,6 @@ header {
     object-fit: cover;
   }
 }
-
 .order-cards {
   align-items: center;
   display: flex;
@@ -504,6 +499,12 @@ input[type="radio"] {
   padding: var(--pad-xxs) var(--pad-xs);
   width: 100%;
 }
+footer {
+  @extend .full-container;
+  background-color: var(--charcoal);
+  padding: var(--pad-xs);
+}
+// Modals and Animations
 .modal {
   height: 100vh;
   margin: 0 auto;
@@ -626,20 +627,6 @@ input[type="radio"] {
   position: fixed;
   z-index: -2;
 }
-footer {
-  @extend .full-container;
-  background-color: var(--charcoal);
-  padding: var(--pad-xs);
-}
-// Keyframes
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .card-choice-shared {
   opacity: 1;
   z-index: 0;
@@ -694,6 +681,48 @@ footer {
 }
 #dev-3:checked ~ .project-details #test {
   transform: translateY(-575px);
+}
+.gallery-row {
+  overflow-x: hidden !important;
+}
+.active-gallery {
+  display: block;
+  animation: 1s fade-in;
+}
+.slide-right {
+  animation: 2s slide-right;
+}
+.slide-left {
+  animation: 2s slide-left;
+}
+// Keyframes
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 10%;
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  from {
+    margin-right: -100%;
+    opacity: 0;
+  }
+  to {
+    margin-right: 10%;
+    opacity: 1;
+  }
 }
 // Responsive Styling, Tablet
 @media only screen and (min-width: 750px) {

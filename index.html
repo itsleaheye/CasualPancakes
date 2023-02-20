@@ -293,7 +293,7 @@
           <span style="color: var(--mustard)">&#9900;</span
           ><span
             id="characterDesign"
-            class="active-gallery"
+            class="active-header"
             onclick="showGallery('characterDesign')"
           >
             &nbsp;character design&nbsp;</span
@@ -303,8 +303,8 @@
             >&nbsp;graphic design</span
           >
         </p>
-        <div class="container row">
-          <div class="gallery active-gallery-view" id="galleryCD">
+        <div class="container row gallery-row">
+          <div class="gallery active-gallery" id="galleryCD">
             <div class="tile">
               <img src="img/art5.png" alt="design tile" />
             </div>
@@ -430,64 +430,42 @@
     });
     //Gallery menu
     function showGallery(galleryOption) {
-      var galleryOf;
-      var gallery;
+      //Enforce that the clicked option is not the current, if we dont check this, the gallery and galleryOf can get lost
+      var galleryOf = document.getElementById(galleryOption);
+      var oldHeader = document.getElementsByClassName("active-header")[0];
+      if (galleryOf !== oldHeader) {
+        var gallery;
+        var slideDirection = "slide-right";
+        var oldLeft = document.getElementsByClassName("slide-left");
+        var oldRight = document.getElementsByClassName("slide-left");
 
-      switch (galleryOption) {
-        case "graphicDesign":
-          gallery = document.getElementById("galleryGD");
-          galleryOf = document.getElementById("graphicDesign");
+        switch (galleryOption) {
+          case "graphicDesign":
+            gallery = document.getElementById("galleryGD");
+            slideDirection = "slide-left";
+            break;
+          case "characterDesign":
+            gallery = document.getElementById("galleryCD");
+            break;
+          default:
+            gallery = document.getElementById("galleryIllustration");
+            break;
+        }
+        //Remove prior active slides, and gallery classes
+        document
+          .getElementsByClassName("active-gallery")[0]
+          .classList.remove("active-gallery");
+        if (oldLeft.length > 0) {
+          oldLeft[0].classList.remove("slide-left");
+        }
+        if (oldRight.length > 0) {
+          oldRight[0].classList.remove("slide-right");
+        }
 
-          document
-            .getElementById("characterDesign")
-            .classList.remove("active-gallery");
-          document
-            .getElementById("illustration")
-            .classList.remove("active-gallery");
-          document
-            .getElementById("galleryCD")
-            .classList.remove("active-gallery-view");
-          document
-            .getElementById("galleryIllustration")
-            .classList.remove("active-gallery-view");
-          break;
-        case "characterDesign":
-          gallery = document.getElementById("galleryCD");
-          galleryOf = document.getElementById("characterDesign");
-
-          document
-            .getElementById("graphicDesign")
-            .classList.remove("active-gallery");
-          document
-            .getElementById("illustration")
-            .classList.remove("active-gallery");
-          document
-            .getElementById("galleryGD")
-            .classList.remove("active-gallery-view");
-          document
-            .getElementById("galleryIllustration")
-            .classList.remove("active-gallery-view");
-          break;
-        default:
-          gallery = document.getElementById("galleryIllustration");
-          galleryOf = document.getElementById("illustration");
-
-          document
-            .getElementById("graphicDesign")
-            .classList.remove("active-gallery");
-          document
-            .getElementById("characterDesign")
-            .classList.remove("active-gallery");
-          document
-            .getElementById("galleryCD")
-            .classList.remove("active-gallery-view");
-          document
-            .getElementById("galleryGD")
-            .classList.remove("active-gallery-view");
-          break;
+        oldHeader.classList.remove("active-header");
+        galleryOf.classList.add("active-header");
+        gallery.classList.add("active-gallery", slideDirection);
       }
-      galleryOf.classList.add("active-gallery");
-      gallery.classList.add("active-gallery-view");
     }
     // Modal toggle
     function show() {

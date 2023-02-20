@@ -350,7 +350,7 @@ header {
   margin: 0 auto;
 }
 
-.active-gallery {
+.active-header {
   color: var(--linen) !important;
   transition: var(--ease-in);
 }
@@ -359,11 +359,6 @@ header {
   display: none;
   width: 80%;
   margin: 0 auto;
-}
-
-.active-gallery-view {
-  display: block;
-  transition: all var(--ease-in);
 }
 
 .text-banner span {
@@ -517,6 +512,11 @@ input[type=radio] {
   width: 100%;
 }
 
+footer {
+  background-color: var(--charcoal);
+  padding: var(--pad-xs);
+}
+
 .modal {
   height: 100vh;
   margin: 0 auto;
@@ -634,19 +634,6 @@ input[type=radio] {
   z-index: -2;
 }
 
-footer {
-  background-color: var(--charcoal);
-  padding: var(--pad-xs);
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .card-choice-shared, #ordertype1:checked ~ .order-cards #ordertype2,
 #ordertype2:checked ~ .order-cards #ordertype3,
 #ordertype3:checked ~ .order-cards #ordertype1, #ordertype1:checked ~ .order-cards #ordertype3,
@@ -727,6 +714,51 @@ footer {
   transform: translateY(-575px);
 }
 
+.gallery-row {
+  overflow-x: hidden !important;
+}
+
+.active-gallery {
+  display: block;
+  animation: 1s fade-in;
+}
+
+.slide-right {
+  animation: 2s slide-right;
+}
+
+.slide-left {
+  animation: 2s slide-left;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 10%;
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  from {
+    margin-right: -100%;
+    opacity: 0;
+  }
+  to {
+    margin-right: 10%;
+    opacity: 1;
+  }
+}
 @media only screen and (min-width: 750px) {
   form {
     width: 80%;
