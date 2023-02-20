@@ -3,7 +3,7 @@
 </p>
 
 
-# CasualPancakes | [View Live](https://casualpancakes.com)
+# CasualPancakes | [View Live](https://casualpancakes.com) | [View Style Guide](https://www.figma.com/file/e3m35ak0yghUWMs03AJuvH/CasualPancakes?node-id=0%3A1&t=biL4Ob536nE3jo95-1)
 My art portfolio and communication platform for my freelance business.
 
 All images and content within this portfolio belong to and were created by myself. They are not free to be re-used.
