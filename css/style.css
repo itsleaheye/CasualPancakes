@@ -853,12 +853,15 @@ footer {
   }
   .block-right h1 {
     padding: var(--pad-sm);
+    margin-left: 2rem;
     text-align: left;
   }
   .block-right p {
     padding: 0 var(--pad-sm);
+    margin-left: 2rem;
   }
   .block-right p:first-child {
+    margin-left: 2rem;
     padding-top: var(--pad-sm);
   }
   .wide-col {

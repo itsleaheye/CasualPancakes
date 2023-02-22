@@ -825,11 +825,14 @@ footer {
     }
     h1 {
       padding: var(--pad-sm);
+      margin-left: 2rem;
       text-align: left;
     }
     p {
       padding: 0 var(--pad-sm);
+      margin-left: 2rem;
       &:first-child {
+        margin-left: 2rem;
         padding-top: var(--pad-sm);
       }
     }
