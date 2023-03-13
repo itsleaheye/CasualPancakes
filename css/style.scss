@@ -1,17 +1,15 @@
 :root {
   // Colours
-
-  --yellow: #f9ebc7;
-
-  --linen: #fcf2da;
-  --linen-dark: #e7e0c8;
   --charcoal: #463b32;
-  --sand: #b99470;
+  --linen-dark: #e7e0c8;
+  --linen: #fcf2da;
   --mustard: #f8b253;
-  --rust: #c4661f;
-  --olive: #5f6f52;
   --olive-nav: #56644a;
+  --olive: #5f6f52;
+  --rust: #c4661f;
   --sage: #a9b388;
+  --sand: #b99470;
+  --yellow: #f9ebc7;
 
   // Spacing
   --pad-xxs: 0.5rem;
@@ -296,6 +294,11 @@ header {
     }
   }
 }
+.wave-linen {
+  svg path {
+    fill: var(--linen-dark);
+  }
+}
 .block-left .wave-shape {
   margin-top: -1rem;
   transform: scaleY(-1);
@@ -357,6 +360,38 @@ header {
   display: none;
   width: 80%;
   margin: 0 auto;
+}
+.shop-banner {
+  .gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    p {
+      margin: var(--pad-xs) var(--pad-sm) var(--pad-xs) 0;
+      width: 14rem;
+      font-weight: 600;
+    }
+    .tile {
+      margin: var(--pad-xs) var(--pad-sm) 0 0;
+      width: 14rem;
+      padding-bottom: 14rem;
+      img {
+        object-fit: fill;
+        object-position: bottom;
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 0.55;
+        transition: var(--ease-in) 0.2s;
+      }
+      &:not(:hover) {
+        transition: var(--ease-in) 0.2s;
+      }
+    }
+  }
+  button {
+    margin-bottom: var(--pad-xxs);
+  }
 }
 .text-banner span {
   color: var(--charcoal);
@@ -768,8 +803,7 @@ footer {
         margin-right: var(--pad-xs);
         width: auto;
         &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4) {
+        &:nth-child(3) {
           border-right: 2px solid var(--sage);
         }
         a {
