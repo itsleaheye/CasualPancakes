@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/61296534/217725259-c0afe3ec-b5e4-46f5-adc2-06b5dbb78a90.png" width="450"/>
+  <img src="https://user-images.githubusercontent.com/61296534/225163597-aaf69fb0-512b-461d-9fcc-00bfbfe71fc4.jpg"/>
 </p>
-
 
 # CasualPancakes | [View Live](https://casualpancakes.com) | [View Style Guide](https://www.figma.com/file/e3m35ak0yghUWMs03AJuvH/CasualPancakes?node-id=0%3A1&t=biL4Ob536nE3jo95-1)
 My art portfolio and communication platform for my freelance business.
