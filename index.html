@@ -9,7 +9,7 @@
     />
     <meta
       name="description"
-      content="Portfolio and art shop of artist CasualPancakes."
+      content="Portfolio and art shop of artist CasualPancakes. Featuring products such as stickers, prints, character design commissions, and even downloadable assets"
     />
     <!-- External Imports -->
     <link
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/logo-casual-pancakes.png" />
+    <link rel="apple-touch-icon" href="/img/logo-casual-pancakes.png" />
     <title>CasualPancakes</title>
   </head>
   <body>
@@ -43,7 +44,10 @@
         </label>
         <ul>
           <li onclick="location.href='#home'">
-            <img src="img/logo-casual-pancakes.png" />
+            <img
+              src="img/logo-casual-pancakes.png"
+              alt="casual-pancakes-logo"
+            />
           </li>
           <li><a href="#about">about</a></li>
           <li><a href="#order">shop</a></li>
@@ -54,7 +58,7 @@
         <div class="banner-content">
           <img
             src="img/casualpancakes-blob-self-portrait.png"
-            alt="Self-portrait-and-logo-of-CasualPancakes"
+            alt="Self-portrait-and-logo-of-canadian-artist-CasualPancakes"
           />
           <div>
             <h1>Casual<br />Pancakes</h1>
@@ -83,7 +87,7 @@
             </svg>
           </div>
           <div class="fade-in">
-            <h1>hello!</h1>
+            <h2>hello!</h2>
             <img
               class="fade-in"
               src="img/avatar-photograph-casual-pancakes.jpg"
@@ -106,7 +110,7 @@
             </svg>
           </div>
           <div class="fade-in">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
             <p class="text-darken bolder">
               I am a digital artist, designer, and software engineer from
               Alberta, Canada.
@@ -128,7 +132,7 @@
         id="order"
         style="margin-bottom: 0; background-color: var(--sage)"
       >
-        <h1>Best Sellers</h1>
+        <h2>Best Sellers</h2>
         <div class="container row gallery-row">
           <div class="gallery">
             <div
@@ -197,7 +201,7 @@
         </svg>
       </div>
       <div class="row text-banner">
-        <h1>Ordering</h1>
+        <h2>Ordering</h2>
         <a
           class="link-dark"
           onclick="window.location='https://www.fiverr.com/casualpancakes'"
@@ -260,7 +264,7 @@
         </div>
         <div class="row fade-in">
           <div class="wide-col">
-            <h2>Extras</h2>
+            <h3>Extras</h3>
             <!--<i class="fa-brands fa-pagelines"></i> -->
             <p style="margin-top: 0.25rem">
               I offer the following additions to all orders
@@ -372,7 +376,7 @@
         class="row text-banner"
         style="margin-bottom: 0; background-color: var(--sage)"
       >
-        <h1>Gallery</h1>
+        <h2>Gallery</h2>
         <!-- <p>Click on the below options to view my work</p> -->
         <p class="tooltip">
           <span id="illustration" onclick="showGallery('illustration')"
@@ -612,6 +616,27 @@
       </div>
     </main>
     <footer>
+      <ul>
+        <li>
+          <a href="https://www.etsy.com/ca/shop/CasualPancakesShop"
+            ><img
+              src="img/icon-etsy-art-shop.png"
+              alt="etsy-shop-stickers-prints-digital-downloads"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/casualpancakes/"
+            ><img
+              src="img/icon-instagram-social.png"
+              alt="contact-social-media-instagram-portfolio"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:casualpancakesdraws@gmail.com"
+            ><img src="img/icon-email-contact.png" alt="contact-artist-email"
+          /></a>
+        </li>
+      </ul>
       <p>All content &#169; Leah Nonay "Pancakes"</p>
     </footer>
   </body>
