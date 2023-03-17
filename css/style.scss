@@ -29,6 +29,9 @@ body {
   line-height: 2rem;
   min-height: 100vh;
   text-align: center;
+  max-width: 150rem;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 // Typography
 .text-shared {
@@ -195,7 +198,7 @@ header {
   background-color: var(--olive);
   flex-direction: column;
   margin-bottom: var(--pad-xs);
-  max-width: 55rem;
+  max-width: 47rem;
   h2 {
     font-weight: 500 !important;
   }
@@ -374,6 +377,7 @@ header {
 .gallery {
   display: none;
   width: 100%;
+  max-width: 65rem;
   margin: 0 auto;
   @media only screen and (min-width: 750px) {
     width: 80%;
@@ -600,7 +604,7 @@ footer {
 .modal {
   height: 100vh;
   margin: 0 auto;
-  margin-top: 6rem; //order matters here
+  margin-top: -2rem; //order matters here
   margin-left: -1.6rem;
   max-width: 100vw;
   opacity: 0;
@@ -802,7 +806,7 @@ footer {
     opacity: 0;
   }
   to {
-    margin-left: 10%;
+    margin-left: 26%;
     opacity: 1;
   }
 }
@@ -812,7 +816,7 @@ footer {
     opacity: 0;
   }
   to {
-    margin-right: 10%;
+    margin-right: 26%;
     opacity: 1;
   }
 }
@@ -842,6 +846,7 @@ footer {
     padding: var(--pad-xs) 0 var(--pad-xs) 0;
     position: fixed;
     width: 100vw;
+    max-width: 150rem;
     z-index: 2;
     label {
       display: none;
