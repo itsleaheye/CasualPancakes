@@ -9,6 +9,7 @@ All images and content within this portfolio belong to and were created by mysel
 * Languages - HTML, JavaScript, SCSS with CSS compression
 * Libraries - FontAwesome Icons, Google Fonts
 * IDE - Visual Studio Code
+* SEO Score - 89/100
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/61296534/217725636-0f93bc33-4327-4f36-8107-12b0f7abc2c8.png" width="750"/>
