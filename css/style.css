@@ -96,6 +96,10 @@ a:not(:hover) {
   transition: var(--ease-in);
 }
 
+.mustard {
+  color: var(--mustard) !important;
+}
+
 .link-dark {
   color: var(--charcoal);
   font-size: 1.1rem;
@@ -264,6 +268,11 @@ header {
   margin-left: var(--pad-xs);
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .banner {
   background-image: url(../img/banner-xl-home.jpg);
   background-position: center;
@@ -411,6 +420,13 @@ header {
   }
 }
 
+.gallery-banner {
+  background-color: var(--sage);
+}
+
+.shop-banner {
+  background-color: var(--sage);
+}
 .shop-banner .gallery {
   display: flex;
   width: 100%;

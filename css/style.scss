@@ -90,6 +90,9 @@ a {
     transition: var(--ease-in);
   }
 }
+.mustard {
+  color: var(--mustard) !important;
+}
 .link-dark {
   color: var(--charcoal);
   font-size: 1.1rem;
@@ -259,6 +262,11 @@ header {
   }
 }
 // Components
+img {
+  //SEO requires this
+  width: 100%;
+  height: 100%;
+}
 .banner {
   background-image: url(../img/banner-xl-home.jpg);
   background-position: center;
@@ -394,7 +402,11 @@ header {
     width: 80%;
   }
 }
+.gallery-banner {
+  background-color: var(--sage);
+}
 .shop-banner {
+  background-color: var(--sage);
   .gallery {
     display: flex;
     width: 100%;
