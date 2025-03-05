@@ -129,19 +129,9 @@
       <!-- Shop & Order Section -->
       <div class="row text-banner shop-banner" id="order">
         <h2>Best Sellers</h2>
-        <div class="container row gallery-row">
-          <div class="gallery">
+        <div>
+          <div class="gallery gallery-shop">
             <div
-              class="tile"
-              onclick="window.location='https://www.redbubble.com/i/sticker/Luna-Moth-Sticker-and-Tote-by-CasualPancakes/141889992.EJUG5'"
-            >
-              <img
-                src="img/product-redbubble-sticker-luna-moth.jpg"
-                alt="Luna-moth-witchy-sticker-product"
-              />
-            </div>
-            <div
-              class="tile"
               onclick="window.location='https://www.redbubble.com/i/tote-bag/The-Raven-and-The-Cat-Tote-by-CasualPancakes/141890467.P1QBH'"
             >
               <img
@@ -150,7 +140,14 @@
               />
             </div>
             <div
-              class="tile"
+              onclick="window.location='https://www.redbubble.com/i/sticker/Luna-Moth-Sticker-and-Tote-by-CasualPancakes/141889992.EJUG5'"
+            >
+              <img
+                src="img/product-redbubble-sticker-luna-moth.jpg"
+                alt="Luna-moth-witchy-sticker-product"
+              />
+            </div>
+            <div
               onclick="window.location='https://www.redbubble.com/i/art-print/The-Raven-and-The-Cat-Print-by-CasualPancakes/141896357.DJUF3'"
             >
               <img
@@ -159,7 +156,6 @@
               />
             </div>
             <div
-              class="tile"
               onclick="window.location='https://www.redbubble.com/i/art-print/Luna-Moth-by-CasualPancakes/141889825.DJUF3'"
             >
               <img
@@ -168,15 +164,14 @@
               />
             </div>
           </div>
-        </div>
-        <div class="container row gallery-row">
-          <div class="gallery">
-            <p>Moth Sticker</p>
+          <div class="gallery gallery-shop">
             <p>Cotton Tote</p>
+            <p>Moth Sticker</p>
             <p>Raven Print</p>
-            <p>Luna Moth Print</p>
+            <p>Lunar Moth Print</p>
           </div>
         </div>
+
         <button
           onclick="window.location='https://www.redbubble.com/people/CasualPancakes/shop'"
         >
@@ -228,16 +223,13 @@
             <label class="card" for="ordertype2" id="ordertype2">
               <div class="price-token">
                 <img
-                  src="img/art-character-design-tiefling-still-commission.jpg"
-                  alt="Art-commission-for-character-design,-a-still-or-scenic-example"
+                  src="img/graphic-design-edmonton-rocketry-club-logo.jpg"
+                  alt="Art-commission-for-graphic-design-or-logo-work-example"
                 />
-                <h3 class="script">$60 CAD</h3>
+                <h3 class="script">$50 CAD</h3>
               </div>
-              <h3>Scenic Still</h3>
-              <p>
-                A fully rendered illustration of the waist up, of any character,
-                background, and quote
-              </p>
+              <h3>Logos</h3>
+              <p>Looking for some customized branding?</p>
               <button onclick="show()">
                 <i class="fa fa-paper-plane"></i> Start My Order
               </button>
@@ -248,7 +240,7 @@
                   src="img/art-character-design-elf-mage-fullbody-commission.jpg"
                   alt="Art-commission-for-character-design,-a-full-body-art-example"
                 />
-                <h3 class="script">$80 CAD</h3>
+                <h3 class="script">$75 CAD</h3>
               </div>
               <h3>Fullbody</h3>
               <p>A fully rendered illustration of any full body character</p>
@@ -258,15 +250,19 @@
             </label>
           </div>
         </div>
-        <div class="row fade-in">
+        <div class="row fade-in" style="margin-bottom: var(--pad-sm)">
           <div class="wide-col">
             <h3>Extras</h3>
-            <p>
+
+            <p class="tooltip tooltip-v2">
               I offer the following additions to all orders:
-              <br />- Additional characters <br />- Digital character sheet
+            </p>
+            <p>
+              - Additional characters <br />- Digital character sheet
               <a href="img/character-sheet-product-download-5e.jpg"
                 >(view example)</a
-              ><br />- Familiars and mounts
+              >
+              <br />- Familiars, pets, and mounts <br />- Custom backgrounds
             </p>
           </div>
         </div>
@@ -284,9 +280,10 @@
             <div class="form-field">
               <label for="package">Art Package</label>
               <select name="package" id="package">
-                <option value="bust">Token</option>
-                <option value="cinematic">Cinematic</option>
-                <option value="fullBody">Full Body</option>
+                <option value="bust">Headshot</option>
+                <option value="cinematic">Full Body</option>
+                <option value="fullBody">Logo or Branding</option>
+                <option value="other">Other</option>
               </select>
             </div>
             <div class="form-field">
@@ -296,17 +293,13 @@
                 min="1"
                 max="6"
                 name="characterTotal"
-                placeholder="0"
+                placeholder="1"
                 required
               />
             </div>
             <div class="form-field">
-              <label for="extras">Extras?</label>
+              <label for="extras">Extras</label>
               <fieldset name="extras">
-                <input type="checkbox" name="smallFamiliar" value="yes" />Small
-                Familiar - $10<br />
-                <input type="checkbox" name="largeFamiliar" value="yes" />Large
-                Familiar or Mount - $20<br />
                 <input type="checkbox" name="background" value="yes" />Custom
                 Background - $5<br />
                 <input
@@ -321,7 +314,7 @@
               <textarea
                 name="characterDetails"
                 form="submitOrderForm"
-                placeholder="Any details about your characters: descriptions (race, hair, skin tones, armor, etc.), desired pose, etc."
+                placeholder="Any details about your characters, including desired pose or elements..."
               ></textarea>
             </div>
             <div class="form-field">
@@ -367,241 +360,171 @@
       </div>
       <div id="gallery" class="row text-banner gallery-banner">
         <h2>Gallery</h2>
-        <!-- <p>Click on the below options to view my work</p> -->
         <p class="tooltip">
-          <span id="illustration" onclick="showGallery('illustration')"
-            >illustration&nbsp;</span
-          >
-          <span class="mustard">&#9900;</span
-          ><span
-            id="characterDesign"
-            class="active-header"
-            onclick="showGallery('characterDesign')"
-          >
-            &nbsp;character design&nbsp;</span
-          >
-          <span class="mustard">&#9900;</span>
-          <span id="graphicDesign" onclick="showGallery('graphicDesign')"
-            >&nbsp;graphic design</span
-          >
+          Explore my digital works as I utilized tools like Adobe<br />
+          Photoshop, Illustrator (2010–2023), and Procreate (2024–present).
         </p>
-        <div class="container row gallery-row">
-          <div class="gallery active-gallery" id="galleryCD">
-            <div class="tile">
-              <img
-                src="img/art-character-design-drow-ranger.jpg"
-                alt="Portrait-character-design-example-a-personal-dungeons-and-dragons-drow-ranger"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-npc-frog.jpg"
-                alt="Portrait-character-design-example-a-npc-frog-alchemist-merchant"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-warlock-tiefling.jpg"
-                alt="Portrait-character-design-example-a-personal-dungeons-and-dragons-tiefling-warlock-and-her-pseudodragon"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-elf-rogue-sakura.jpg"
-                alt="Portrait-character-design-example,-a-elven-rogue-surrounded-by-falling-sakura-petals"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-elf-fae-forest.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragons-elven-fae-druid"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-fire-genasi.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragons-fire-genasi-fighter"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-portrait-tiefling-druid.jpg"
-                alt="Portrait-character-design-example,-a-personal-dungeons-and-dragons-tiefling-druid-and-her-fae-companion"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-tiefling-elf-couple.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragonstiefling-and-elven-couple"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-elf-fighter.jpg"
-                alt="Portrait character-design-example,-a-dungeons-and-dragons-elven-fighter-surrounded-by-flaming-ruins"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-dnd-5e-party-undead.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragons-party"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-book-cover-npc.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragons-npc-book-cover"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-npc-mushroom.jpg"
-                alt="Portrait-character-design-example,-a-mushroom-merchant-npc"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-orc-barbarian.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragons-orc-barbarian"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-dnd-5e-party-tavern.jpg"
-                alt="Portrait-character-design-example,-a-dungeons-and-dragons-party-in-a-tavern"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-character-design-aasimar-paladin.jpg"
-                alt="Portrait-character-design-example,-a-personal-dungeons-and-dragons-winged-aasimar-fighter"
-              />
-            </div>
-          </div>
-          <div class="gallery" id="galleryIllustration">
-            <div class="tile">
-              <img
-                src="img/art-illustration-self-portrait-casual-pancakes.jpg"
-                alt="An-illustration-of-artist-CasualPancakes"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-raven-print.jpg"
-                alt="An-illustration-of-a-raven-and-skull-print-available-on-Redbubble"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-pokemon-trainer.jpg"
-                alt="An-illustration-of-artist-CasualPancakes-surrounded-by-her-favorite-pokemon"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-luna-moth-print.jpg"
-                alt="An-illustration-of-a-luna-moth-witchy-print-available-on-Redbubble"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-meet-the-artist.jpg"
-                alt="An-illustration-of-the-meet-the-artist-challenge-featuring-artist-CasualPancakes"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-death-moth-ouija-print.jpg"
-                alt="An-illustration-of-a-death-moth-print-available-on-Redbubble"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-couple-gaming.jpg"
-                alt="An-illustration-of-artist-CasualPancakes-and-her-Fiance-surrounded-by-their-animals"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-luci-disenchantment.png"
-                alt="An-illustration-of-Luci-from-Disenchantment-hugging-a-pumpkin"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-dnd-floral.jpg"
-                alt="An-illustration-of-a-dungeons-and-dragons-themed-wedding-invitation"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-three-eyed-fox.jpg"
-                alt="An-illustration-of-a-three-eyed-fox"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-modern-witch.jpg"
-                alt="An-illustration-of-a-modern-day-witch-and-her-raven-familiar"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-patronus-slytherin.gif"
-                alt="An-illustration-and-gif-of-a-slytherin-girl-resting-and-summoning-a-patronus-fox"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-cat.jpg"
-                alt="An-illustration-of-CasualPancake's-cat-Pan-on-moving-boxes"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-world-of-warcraft-couple.jpg"
-                alt="An-illustration-of-2-world-of-warcraft-players-riding-the-love-rocket"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/art-illustration-bite-me-bats-stickers.jpg"
-                alt="An-illustration-of-a-set-of-bat-stickers-available-on-Redbubble"
-              />
-            </div>
-          </div>
-          <div class="gallery" id="galleryGD">
-            <div class="tile">
-              <img
-                src="img/graphic-design-cantrip-logo.jpg"
-                alt="A-logo-design-featuring-application-Cantrip"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/graphic-design-leah-eyestone-logo.jpg"
-                alt="A-logo-design-featuring-CasualPancake's-personal-software-engineering-branding"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/graphic-design-temporal-fox-logo.jpg"
-                alt="A-logo-design-featuring-a-fox-and-moon-for-company-TemporalFox"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/graphic-design-edmonton-rocketry-club-logo.jpg"
-                alt="A-logo-design-featuring-the-Edmonton-Rocketry-Club-for-their-AARM-event-in-2021"
-              />
-            </div>
-            <div class="tile">
-              <img
-                src="img/graphic-design-tea-cup-cresties-logo.jpg"
-                alt="A-logo-design-featuring-illustrations-for-crested-gecko-breeder-Tea-Cup-Cresties"
-              />
-            </div>
-          </div>
+        <h3 style="margin-top: var(--pad-xs)">Past Commissions</h3>
+        <p style="margin: var(--pad-xxs) auto">
+          Take a look at past character designs, game assets, and book covers.
+        </p>
+        <div class="gallery gallery-main">
+          <img
+            src="img/art-character-design-drow-ranger.jpg"
+            alt="Portrait-character-design-example-a-personal-dungeons-and-dragons-drow-ranger"
+          />
+          <img
+            src="img/art-character-design-npc-frog.jpg"
+            alt="Portrait-character-design-example-a-npc-frog-alchemist-merchant"
+          />
+          <img
+            src="img/art-character-design-warlock-tiefling.jpg"
+            alt="Portrait-character-design-example-a-personal-dungeons-and-dragons-tiefling-warlock-and-her-pseudodragon"
+          />
+          <img
+            src="img/art-character-design-elf-rogue-sakura.jpg"
+            alt="Portrait-character-design-example,-a-elven-rogue-surrounded-by-falling-sakura-petals"
+          />
+          <img
+            src="img/art-character-design-elf-fae-forest.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragons-elven-fae-druid"
+          />
+          <img
+            src="img/art-character-design-fire-genasi.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragons-fire-genasi-fighter"
+          />
+          <img
+            src="img/art-portrait-tiefling-druid.jpg"
+            alt="Portrait-character-design-example,-a-personal-dungeons-and-dragons-tiefling-druid-and-her-fae-companion"
+          />
+          <img
+            src="img/art-character-design-tiefling-elf-couple.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragonstiefling-and-elven-couple"
+          />
+          <img
+            src="img/art-character-design-elf-fighter.jpg"
+            alt="Portrait character-design-example,-a-dungeons-and-dragons-elven-fighter-surrounded-by-flaming-ruins"
+          />
+          <img
+            src="img/art-character-design-dnd-5e-party-undead.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragons-party"
+          />
+          <img
+            src="img/art-character-design-book-cover-npc.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragons-npc-book-cover"
+          />
+          <img
+            src="img/art-character-design-npc-mushroom.jpg"
+            alt="Portrait-character-design-example,-a-mushroom-merchant-npc"
+          />
+          <img
+            src="img/art-character-design-orc-barbarian.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragons-orc-barbarian"
+          />
+          <img
+            src="img/art-character-design-dnd-5e-party-tavern.jpg"
+            alt="Portrait-character-design-example,-a-dungeons-and-dragons-party-in-a-tavern"
+          />
+          <img
+            src="img/art-character-design-aasimar-paladin.jpg"
+            alt="Portrait-character-design-example,-a-personal-dungeons-and-dragons-winged-aasimar-fighter"
+          />
+        </div>
+        <h3>Brand Work</h3>
+        <p style="margin: var(--pad-xxs) auto">
+          Logos, posters, banners, and more.
+        </p>
+        <div class="gallery gallery-main">
+          <img
+            src="img/graphic-design-cantrip-logo.jpg"
+            alt="A-logo-design-featuring-application-Cantrip"
+          />
+          <img
+            src="img/graphic-design-leah-eyestone-logo.jpg"
+            alt="A-logo-design-featuring-CasualPancake's-personal-software-engineering-branding"
+          />
+          <img
+            src="img/graphic-design-temporal-fox-logo.jpg"
+            alt="A-logo-design-featuring-a-fox-and-moon-for-company-TemporalFox"
+          />
+          <img
+            src="img/graphic-design-edmonton-rocketry-club-logo.jpg"
+            alt="A-logo-design-featuring-the-Edmonton-Rocketry-Club-for-their-AARM-event-in-2021"
+          />
+          <img
+            src="img/graphic-design-tea-cup-cresties-logo.jpg"
+            alt="A-logo-design-featuring-illustrations-for-crested-gecko-breeder-Tea-Cup-Cresties"
+          />
+        </div>
+        <h3>Personal Pieces</h3>
+        <p style="margin: var(--pad-xxs) auto">
+          Personal artworks, art challenges, fan art, and shop products.
+        </p>
+        <div class="gallery gallery-main">
+          <img
+            src="img/art-illustration-self-portrait-casual-pancakes.jpg"
+            alt="An-illustration-of-artist-CasualPancakes"
+          />
+          <img
+            src="img/art-illustration-raven-print.jpg"
+            alt="An-illustration-of-a-raven-and-skull-print-available-on-Redbubble"
+          />
+          <img
+            src="img/art-illustration-pokemon-trainer.jpg"
+            alt="An-illustration-of-artist-CasualPancakes-surrounded-by-her-favorite-pokemon"
+          />
+          <img
+            src="img/art-illustration-luna-moth-print.jpg"
+            alt="An-illustration-of-a-luna-moth-witchy-print-available-on-Redbubble"
+          />
+          <img
+            src="img/art-illustration-meet-the-artist.jpg"
+            alt="An-illustration-of-the-meet-the-artist-challenge-featuring-artist-CasualPancakes"
+          />
+          <img
+            src="img/art-illustration-death-moth-ouija-print.jpg"
+            alt="An-illustration-of-a-death-moth-print-available-on-Redbubble"
+          />
+          <img
+            src="img/art-illustration-couple-gaming.jpg"
+            alt="An-illustration-of-artist-CasualPancakes-and-her-Fiance-surrounded-by-their-animals"
+          />
+          <img
+            src="img/art-illustration-luci-disenchantment.png"
+            alt="An-illustration-of-Luci-from-Disenchantment-hugging-a-pumpkin"
+          />
+          <img
+            src="img/art-illustration-dnd-floral.jpg"
+            alt="An-illustration-of-a-dungeons-and-dragons-themed-wedding-invitation"
+          />
+          <img
+            src="img/art-illustration-three-eyed-fox.jpg"
+            alt="An-illustration-of-a-three-eyed-fox"
+          />
+          <img
+            src="img/art-illustration-modern-witch.jpg"
+            alt="An-illustration-of-a-modern-day-witch-and-her-raven-familiar"
+          />
+          <img
+            src="img/art-illustration-patronus-slytherin.gif"
+            alt="An-illustration-and-gif-of-a-slytherin-girl-resting-and-summoning-a-patronus-fox"
+          />
+          <img
+            src="img/art-illustration-cat.jpg"
+            alt="An-illustration-of-CasualPancake's-cat-Pan-on-moving-boxes"
+          />
+          <img
+            src="img/art-illustration-world-of-warcraft-couple.jpg"
+            alt="An-illustration-of-2-world-of-warcraft-players-riding-the-love-rocket"
+          />
+          <img
+            src="img/art-illustration-bite-me-bats-stickers.jpg"
+            alt="An-illustration-of-a-set-of-bat-stickers-available-on-Redbubble"
+          />
+          <img
+            src="img/optimize-elara.png"
+            alt="An-illustration-of-a-barbarian female fighter with a great axe swirling with magic"
+          />
         </div>
       </div>
     </main>
@@ -651,45 +574,6 @@
         });
       }
     });
-    //Gallery menu
-    function showGallery(galleryOption) {
-      //Enforce that the clicked option is not the current, if we dont check this, the gallery and galleryOf can get lost
-      var galleryOf = document.getElementById(galleryOption);
-      var oldHeader = document.getElementsByClassName("active-header")[0];
-      if (galleryOf !== oldHeader) {
-        var gallery;
-        var slideDirection = "slide-right";
-        var oldLeft = document.getElementsByClassName("slide-left");
-        var oldRight = document.getElementsByClassName("slide-left");
-
-        switch (galleryOption) {
-          case "graphicDesign":
-            gallery = document.getElementById("galleryGD");
-            slideDirection = "slide-left";
-            break;
-          case "characterDesign":
-            gallery = document.getElementById("galleryCD");
-            break;
-          default:
-            gallery = document.getElementById("galleryIllustration");
-            break;
-        }
-        //Remove prior active slides, and gallery classes
-        document
-          .getElementsByClassName("active-gallery")[0]
-          .classList.remove("active-gallery");
-        if (oldLeft.length > 0) {
-          oldLeft[0].classList.remove("slide-left");
-        }
-        if (oldRight.length > 0) {
-          oldRight[0].classList.remove("slide-right");
-        }
-
-        oldHeader.classList.remove("active-header");
-        galleryOf.classList.add("active-header");
-        gallery.classList.add("active-gallery", slideDirection);
-      }
-    }
     // Modal toggle
     function show() {
       var modal = document.getElementById("modal");

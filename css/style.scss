@@ -3,7 +3,7 @@
   --charcoal: #463b32;
   --linen-dark: #e7e0c8;
   --linen: #fcf2da;
-  --mustard: #f8b253;
+  --mustard: #ffc471;
   --olive-nav: #56644a;
   --olive: #5f6f52;
   --rust: #c4661f;
@@ -215,11 +215,24 @@ header {
   p {
     color: var(--linen) !important;
   }
+  .tooltip-v2 {
+    margin: var(--pad-xxs) auto 0 auto;
+    font-weight: 600 !important;
+  }
 }
 .block-left {
   background-color: var(--olive);
   padding: var(--pad-xs) 0;
   width: 40%;
+
+  @media only screen and (min-width: 750px) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .fade-in {
+    padding: var(--pad-xs);
+  }
   h2 {
     font-size: 2.5rem;
     color: var(--mustard);
@@ -310,11 +323,8 @@ img {
   max-width: 30rem;
 }
 .tooltip {
-  margin-top: 0.01rem !important;
   padding: var(--pad-xxs);
   border-top: 2px solid var(--mustard);
-  flex-direction: row;
-  display: flex;
 }
 // generated with https://www.shapedivider.app/
 .full-wave-shape {
@@ -393,77 +403,62 @@ img {
   color: var(--linen) !important;
   transition: var(--ease-in);
 }
+
+.gallery-main {
+  grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (min-width: 750px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gallery-shop {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .gallery {
-  display: none;
-  width: 100%;
-  max-width: 65rem;
+  animation: 1s fade-in;
+  display: grid;
+  gap: var(--pad-xs);
   margin: 0 auto;
+  max-width: 65rem;
+  padding: var(--pad-xxs);
+  width: 100%;
   @media only screen and (min-width: 750px) {
     width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  p {
+    margin: 0 auto;
+    font-weight: 600;
   }
 }
 .gallery-banner {
   background-color: var(--sage);
+
+  h3 {
+    margin-top: var(--pad-sm);
+  }
 }
 .shop-banner {
   background-color: var(--sage);
-  .gallery {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: inherit;
-    p {
-      display: none;
-      font-weight: 600;
-    }
-    .tile {
-      margin: var(--pad-xxs);
-      width: 40%;
-      padding-bottom: 40%;
-      display: block;
-      img {
-        object-fit: fill;
-        object-position: bottom;
-      }
-      &:hover {
-        cursor: pointer;
-        opacity: 0.55;
-        transition: var(--ease-in) 0.2s;
-      }
-      &:not(:hover) {
-        transition: var(--ease-in) 0.2s;
-      }
-    }
-    @media only screen and (min-width: 750px) {
-      display: flex;
-      p {
-        width: 10rem;
-        display: block;
-      }
-      .tile {
-        margin: var(--pad-xxs) var(--pad-sm) 0 0;
-        min-width: 10rem;
-        width: 10rem;
-        padding-bottom: 10rem;
-      }
-    }
-    @media only screen and (min-width: 1024px) {
-      display: flex;
-      p {
-        margin: var(--pad-xs) var(--pad-sm) var(--pad-xs) 0;
-        width: 14rem;
-      }
-      .tile {
-        margin: var(--pad-xs) var(--pad-sm) 0 0;
-        min-width: 14rem;
-        width: 14rem;
-        padding-bottom: 14rem;
-      }
-    }
-  }
+  gap: var(--pad-sm);
+  padding: var(--pad-md) var(--pad-sm);
+  flex-direction: column;
+
   button {
-    margin: var(--pad-xxs) auto;
+    margin: 0 auto !important;
+
+    @media only screen and (min-width: 750px) {
+      margin: calc(var(--pad-sm) * 2) auto 0 auto !important;
+    }
   }
 }
 .text-banner span {
@@ -478,29 +473,6 @@ img {
     transition: var(--ease-in) 0.2s;
   }
 }
-.tile {
-  margin: var(--pad-xxs) / 2;
-  overflow: hidden;
-  padding-bottom: 47%;
-  position: relative;
-  width: 47%;
-  float: left;
-  background-color: var(--sage);
-  img {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  @media only screen and (min-width: 750px) {
-    width: 20%;
-    padding-bottom: 20%;
-  }
-}
 .order-cards {
   align-items: center;
   display: flex;
@@ -508,30 +480,40 @@ img {
   height: 32rem;
   margin-bottom: var(--pad-xs);
   margin-top: var(--pad-xs);
+  overflow-x: hidden;
   position: relative;
   transform-style: preserve-3d;
-  width: 70%;
+  width: 100%;
   .card {
     background-color: var(--sage);
-    padding: var(--pad-sm);
-    width: 60vw;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad-xs);
     overflow: hidden;
+    padding: var(--pad-sm);
     position: absolute;
     transition: transform 0.5s ease;
+    width: 60vw;
+
     @media only screen and (min-width: 750px) {
       width: 18rem;
     }
     @media only screen and (min-width: 1024) {
       width: 21rem;
     }
+
     .price-token {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       border-radius: 100%;
       margin: 0 auto;
       max-height: 16rem;
       max-width: 16rem;
       overflow: hidden;
       position: relative;
+      width: 100%;
+
       h3 {
         color: var(--linen);
         display: none;
@@ -546,6 +528,7 @@ img {
           width: 100%;
           top: 33%;
           transition: var(--ease-in);
+          margin: 7% auto !important;
           z-index: 2;
         }
         img {
@@ -564,11 +547,12 @@ img {
     h3 {
       font-family: "Berkshire Swash", cursive;
       font-weight: 500 !important;
-      margin: var(--pad-xs) auto;
+      margin: 0 auto;
       color: var(--linen);
     }
     p {
       color: var(--charcoal);
+      margin: 0 auto;
     }
   }
 }
@@ -577,12 +561,18 @@ button {
   background-color: var(--rust);
   border: 2px solid var(--linen);
   color: var(--linen);
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1.5rem;
   margin: var(--pad-xxs) auto;
   padding: var(--pad-xxs) var(--pad-xs);
   width: 100%;
+
+  @media screen and (min-width: 750px) {
+    font-size: 1.2rem;
+    max-width: 250px !important;
+  }
+
   &:hover {
     background-color: var(--linen);
     color: var(--rust);
@@ -688,7 +678,7 @@ footer {
       font-size: 1rem;
       margin: var(--pad-xs) 0;
       label {
-        color: var(--olive);
+        color: var(--charcoal);
         display: block;
         text-align: left;
       }
@@ -827,13 +817,6 @@ footer {
 #dev-3:checked ~ .project-details #test {
   transform: translateY(-575px);
 }
-.gallery-row {
-  overflow-x: hidden !important;
-}
-.active-gallery {
-  display: block;
-  animation: 1s fade-in;
-}
 .slide-right {
   animation: 2s slide-right;
 }
@@ -946,6 +929,7 @@ footer {
   .block-left {
     padding: var(--pad-md) 0;
     width: 35%;
+
     h1 {
       font-size: 3rem;
       padding: 0 var(--pad-sm);
