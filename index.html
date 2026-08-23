@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
           <div></div>
         </label>
         <ul>
-          <li onclick="location.href='#home'">
+          <li onclick="location.href = '#home'">
             <img
               src="img/logo-casual-pancakes.png"
               alt="casual-pancakes-logo"
@@ -132,7 +132,10 @@
         <div>
           <div class="gallery gallery-shop">
             <div
-              onclick="window.location='https://www.redbubble.com/i/tote-bag/The-Raven-and-The-Cat-Tote-by-CasualPancakes/141890467.P1QBH'"
+              onclick="
+                window.location =
+                  'https://www.redbubble.com/i/tote-bag/The-Raven-and-The-Cat-Tote-by-CasualPancakes/141890467.P1QBH'
+              "
             >
               <img
                 src="img/product-redbubble-tote-bag-raven.jpg"
@@ -140,7 +143,10 @@
               />
             </div>
             <div
-              onclick="window.location='https://www.redbubble.com/i/sticker/Luna-Moth-Sticker-and-Tote-by-CasualPancakes/141889992.EJUG5'"
+              onclick="
+                window.location =
+                  'https://www.redbubble.com/i/sticker/Luna-Moth-Sticker-and-Tote-by-CasualPancakes/141889992.EJUG5'
+              "
             >
               <img
                 src="img/product-redbubble-sticker-luna-moth.jpg"
@@ -148,7 +154,10 @@
               />
             </div>
             <div
-              onclick="window.location='https://www.redbubble.com/i/art-print/The-Raven-and-The-Cat-Print-by-CasualPancakes/141896357.DJUF3'"
+              onclick="
+                window.location =
+                  'https://www.redbubble.com/i/art-print/The-Raven-and-The-Cat-Print-by-CasualPancakes/141896357.DJUF3'
+              "
             >
               <img
                 src="img/product-redbubble-print-raven.jpg"
@@ -156,7 +165,10 @@
               />
             </div>
             <div
-              onclick="window.location='https://www.redbubble.com/i/art-print/Luna-Moth-by-CasualPancakes/141889825.DJUF3'"
+              onclick="
+                window.location =
+                  'https://www.redbubble.com/i/art-print/Luna-Moth-by-CasualPancakes/141889825.DJUF3'
+              "
             >
               <img
                 src="img/product-redbubble-print-luna-moth.jpg"
@@ -173,7 +185,10 @@
         </div>
 
         <button
-          onclick="window.location='https://www.redbubble.com/people/CasualPancakes/shop'"
+          onclick="
+            window.location =
+              'https://www.redbubble.com/people/CasualPancakes/shop'
+          "
         >
           <i class="fa-solid fa-store"></i> Shop All Products
         </button>
@@ -195,7 +210,7 @@
         <h2>Ordering</h2>
         <a
           class="link-dark"
-          onclick="window.location='https://www.fiverr.com/casualpancakes'"
+          onclick="window.location = 'https://www.fiverr.com/casualpancakes'"
           >View Reviews</a
         >
         <div class="row fade-in">
@@ -267,14 +282,25 @@
           </div>
         </div>
         <div class="modal" id="modal">
-          <form id="submitOrderForm" method="POST" data-netlify="true" netlify>
+          <form
+            data-netlify="true"
+            id="submitOrderForm"
+            method="POST"
+            name="art-order"
+            netlify
+            netlify-honeypot="bot-field"
+          >
             <div class="form-field">
               <label for="email">Your Email*</label>
               <input
-                type="email"
+                autocomplete="email"
+                maxlength="100"
                 name="senderEmail"
-                required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}"
                 placeholder="ie. artplease@gmail.com"
+                required
+                title="Please enter a valid email address, such as name@gmail.com"
+                type="email"
               />
             </div>
             <div class="form-field">
@@ -289,12 +315,13 @@
             <div class="form-field">
               <label for="characterTotal">Number of Characters*</label>
               <input
-                type="number"
-                min="1"
                 max="6"
+                min="1"
                 name="characterTotal"
                 placeholder="1"
                 required
+                step="1"
+                type="number"
               />
             </div>
             <div class="form-field">
@@ -303,8 +330,8 @@
                 <input type="checkbox" name="background" value="yes" />Custom
                 Background - $5<br />
                 <input
-                  type="checkbox"
                   name="digitalCharacterSheet"
+                  type="checkbox"
                   value="yes"
                 />Digital Character Sheet - $3<br />
               </fieldset>
@@ -313,6 +340,7 @@
               <label for="characterDetails">Details</label>
               <textarea
                 name="characterDetails"
+                maxlength="1000"
                 form="submitOrderForm"
                 placeholder="Any details about your characters, including desired pose or elements..."
               ></textarea>
@@ -325,10 +353,11 @@
                   type="file"
                   id="characterFiles"
                   name="characterFiles"
-                  accept=".jpg, .jpeg, .png, .pdf, .docx"
+                  accept="image/jpeg,image/png"
                 />
               </label>
             </div>
+
             <button type="submit">
               <i class="fa fa-paper-plane" type="submit"></i> Submit Order
             </button>
@@ -564,7 +593,7 @@
           var element =
             document.querySelector(href) ||
             document.querySelector(
-              "a[name=" + href.substring(1, href.length) + "]"
+              "a[name=" + href.substring(1, href.length) + "]",
             );
           window.scroll({
             top: element.offsetTop - 50,
@@ -587,6 +616,7 @@
     function orderSubmitted() {
       var modal = document.getElementById("modal");
       modal.classList.add("thanks");
+
       setTimeout(() => {
         const banner = document.getElementById("success-banner");
         banner.style.display = "none";
